@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\joaop\Circuitos\INF01058\LAB03\MUX8bit\simulation\qsim
+vMux8bit
+Z1 !s100 f_<TB@4>JU^gN`X[[1G=X1
+Z2 IIHFFbQL:UYeAKl4RgHFjX3
+Z3 VATFKdN>nj6=mklf9hU7O10
+Z4 dC:\Users\joaop\Circuitos\INF01058\LAB03\MUX8bit\simulation\qsim
+Z5 w1758810277
+Z6 8Multiplexador.vo
+Z7 FMultiplexador.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Multiplexador.vo|
+Z10 o-work work -O0
+Z11 n@mux8bit
+!i10b 1
+!s85 0
+Z12 !s108 1758810277.998000
+Z13 !s107 Multiplexador.vo|
+!s101 -O0
+vMux8bit_vlg_check_tst
+!i10b 1
+!s100 PJ=n6UTh6=bHgkfOnJMl83
+ID`IiKH4`dBf6e^Aj84d_80
+Z14 Vik_abGVYV36Kn_BzmfKnZ3
+R4
+Z15 w1758810276
+Z16 8WaveformMUX8bit.vwf.vt
+Z17 FWaveformMUX8bit.vwf.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z18 !s108 1758810278.050000
+Z19 !s107 WaveformMUX8bit.vwf.vt|
+Z20 !s90 -work|work|WaveformMUX8bit.vwf.vt|
+!s101 -O0
+R10
+Z21 n@mux8bit_vlg_check_tst
+vMux8bit_vlg_sample_tst
+!i10b 1
+!s100 e3YLUfVf>HTo?MfKjc3Si2
+IA0<VcdAE[[STP8m=kobEI2
+Z22 V_?gOdEi2jnchVkfTU3eQA2
+R4
+R15
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z23 n@mux8bit_vlg_sample_tst
+vMux8bit_vlg_vec_tst
+!i10b 1
+!s100 V1@05l1=goZZn;zD@ll^C0
+I`]P9l3Ne4WfKi>J0X0a_j0
+Z24 Vbj=bn[i>A?>@lBc@NKeE@0
+R4
+R15
+R16
+R17
+Z25 L0 281
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z26 n@mux8bit_vlg_vec_tst

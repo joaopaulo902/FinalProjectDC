@@ -1,0 +1,99 @@
+|Mux8bit
+Z[0] <= Multiplexador:inst.Z
+Z[1] <= Multiplexador:inst1.Z
+Z[2] <= Multiplexador:inst2.Z
+Z[3] <= Multiplexador:inst3.Z
+Z[4] <= Multiplexador:inst4.Z
+Z[5] <= Multiplexador:inst5.Z
+Z[6] <= Multiplexador:inst6.Z
+Z[7] <= Multiplexador:inst7.Z
+Sel => Multiplexador:inst1.Sel
+Sel => Multiplexador:inst.Sel
+Sel => Multiplexador:inst2.Sel
+Sel => Multiplexador:inst3.Sel
+Sel => Multiplexador:inst5.Sel
+Sel => Multiplexador:inst6.Sel
+Sel => Multiplexador:inst7.Sel
+Sel => Multiplexador:inst4.Sel
+A[0] => Multiplexador:inst.A
+A[1] => Multiplexador:inst1.A
+A[2] => Multiplexador:inst2.A
+A[3] => Multiplexador:inst3.A
+A[4] => Multiplexador:inst4.A
+A[5] => Multiplexador:inst5.A
+A[6] => Multiplexador:inst6.A
+A[7] => Multiplexador:inst7.A
+B[0] => Multiplexador:inst.B
+B[1] => Multiplexador:inst1.B
+B[2] => Multiplexador:inst2.B
+B[3] => Multiplexador:inst3.B
+B[4] => Multiplexador:inst4.B
+B[5] => Multiplexador:inst5.B
+B[6] => Multiplexador:inst6.B
+B[7] => Multiplexador:inst7.B
+
+
+|Mux8bit|Multiplexador:inst1
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|Mux8bit|Multiplexador:inst
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|Mux8bit|Multiplexador:inst2
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|Mux8bit|Multiplexador:inst3
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|Mux8bit|Multiplexador:inst5
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|Mux8bit|Multiplexador:inst6
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|Mux8bit|Multiplexador:inst7
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|Mux8bit|Multiplexador:inst4
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
