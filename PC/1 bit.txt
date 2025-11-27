@@ -1,0 +1,20 @@
+1 bit
+inc
+0 1 0 1 0 1 0
+dec
+1 0 1 0 1 0 1
+
+2 bits
+inc
+00 01 10 11 00 01 10 11
+dec
+11 10 01 00 11 10 01 00
+
+3 bits
+
+inc
+000 001 010 011 100 101 110 111
+dec
+111 110 101 100 011 010 001 000
+
+se bit anterior era 0 e virou 1, próximo bit deve inverter o sinal
