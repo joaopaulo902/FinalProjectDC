@@ -1,0 +1,9 @@
+frequency divider:
+	Area:
+		-Logic Elements: 49
+		-Pins: 3
+	Critical Delay:
+		6.494 ns (Reset -> S FF)
+	Fmax Summary:
+		Fmax: 1466.28 MHz
+		

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Nov 18 10:31:21 2025
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : feqDiv
+Top-level Entity Name : feqDiv
+Family : Cyclone III
+Total logic elements : 25
+    Total combinational functions : 25
+    Dedicated logic registers : 25
+Total registers : 25
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
