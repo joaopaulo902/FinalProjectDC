@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\joaop\UFRGS\Circuitos\TRFINAL\acumulador\simulation\qsim
+vAC
+Z1 !s100 M7047Z3j2e5z;:f5YPEnb1
+Z2 IbTnDXa2R[DX23jiMUj0j?3
+Z3 V]^cnk2Gi]YI_QCCK7zZlZ3
+Z4 dC:\Users\joaop\UFRGS\Circuitos\TRFINAL\acumulador\simulation\qsim
+Z5 w1764462293
+Z6 8AC.vo
+Z7 FAC.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|AC.vo|
+Z10 o-work work -O0
+n@a@c
+!i10b 1
+!s85 0
+Z11 !s108 1764462294.524000
+Z12 !s107 AC.vo|
+!s101 -O0
+vAC_vlg_check_tst
+!i10b 1
+Z13 !s100 ladTodH3gV]CUP?I[41]X0
+Z14 IJUaUL5`^i7eR^WcD9zDm51
+Z15 VL:]^36O3EkUnM=b75=PoR2
+R4
+Z16 w1764462292
+Z17 8WaveformAC.vwf.vt
+Z18 FWaveformAC.vwf.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1764462294.621000
+Z20 !s107 WaveformAC.vwf.vt|
+Z21 !s90 -work|work|WaveformAC.vwf.vt|
+!s101 -O0
+R10
+Z22 n@a@c_vlg_check_tst
+vAC_vlg_sample_tst
+!i10b 1
+Z23 !s100 cC9kYb4N;^8Cg9e;EQ]^z2
+Z24 IVm8>N:2S?za`SE`P@di_P0
+Z25 VI0zZzOlA:fG9Azc]gn_N_3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z26 n@a@c_vlg_sample_tst
+vAC_vlg_vec_tst
+!i10b 1
+!s100 [=fL8Q9>1F?8`n;lWzmVD3
+Ic^`Qk4;SBGD4H4YVEVPX81
+Z27 VeL1CJ;b5gcAN:jG1]XgaD0
+R4
+R16
+R17
+R18
+Z28 L0 335
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z29 n@a@c_vlg_vec_tst
+vflagLogic
+Z30 !s100 oke>YbRXmglbGkRCTJAO52
+Z31 I??QWom]9Z0J;1@@RAmjZc0
+Z32 V[95^@8dKGWEO9kMzmL4H91
+R4
+Z33 w1764461486
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z34 nflag@logic
+Z35 !s108 1764461486.914000
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vflagLogic_vlg_check_tst
+Z36 !s100 C_K[2GafCfLE?C5aOSGg<2
+Z37 IbXzg=5:GV`P;[SEZERN]61
+Z38 Va7[fQ2`7iY;MO^B1E9M?01
+R4
+Z39 w1764461484
+Z40 8Waveform.vwf.vt
+Z41 FWaveform.vwf.vt
+L0 57
+R8
+r1
+31
+Z42 !s108 1764461487.004000
+Z43 !s107 Waveform.vwf.vt|
+Z44 !s90 -work|work|Waveform.vwf.vt|
+R10
+Z45 nflag@logic_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vflagLogic_vlg_sample_tst
+Z46 !s100 ZI7X:TLg?mkiDho3YKRho3
+Z47 I]ilzH5Gj2XO7Q5TD:[HJi0
+Z48 VNelDH8@ZzbGRV8c@jT@`E0
+R4
+R39
+R40
+R41
+L0 29
+R8
+r1
+31
+R42
+R43
+R44
+R10
+Z49 nflag@logic_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vflagLogic_vlg_vec_tst
+Z50 INIOW<AOYhIhf7MNRlMk[R2
+Z51 V<lZhT8d;1Z>K;MbZ>=7_m2
+R4
+R39
+R40
+R41
+Z52 L0 179
+R8
+r1
+31
+R42
+R43
+R44
+R10
+Z53 nflag@logic_vlg_vec_tst
+Z54 !s100 NAF@a]l0AD9lIn>Ahe<b@0
+!i10b 1
+!s85 0
+!s101 -O0

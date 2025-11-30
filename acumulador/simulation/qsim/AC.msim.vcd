@@ -1,0 +1,531 @@
+$comment
+	File created using the following command:
+		vcd file AC.msim.vcd -direction
+$end
+$date
+	Sat Nov 29 21:24:55 2025
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module AC_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 8 " IN [7:0] $end
+$var reg 1 # Reset $end
+$var wire 1 $ N $end
+$var wire 1 % OUT [7] $end
+$var wire 1 & OUT [6] $end
+$var wire 1 ' OUT [5] $end
+$var wire 1 ( OUT [4] $end
+$var wire 1 ) OUT [3] $end
+$var wire 1 * OUT [2] $end
+$var wire 1 + OUT [1] $end
+$var wire 1 , OUT [0] $end
+$var wire 1 - Z $end
+$var wire 1 . sampler $end
+$scope module i1 $end
+$var wire 1 / gnd $end
+$var wire 1 0 vcc $end
+$var wire 1 1 unknown $end
+$var tri1 1 2 devclrn $end
+$var tri1 1 3 devpor $end
+$var tri1 1 4 devoe $end
+$var wire 1 5 Z~output_o $end
+$var wire 1 6 N~output_o $end
+$var wire 1 7 OUT[7]~output_o $end
+$var wire 1 8 OUT[6]~output_o $end
+$var wire 1 9 OUT[5]~output_o $end
+$var wire 1 : OUT[4]~output_o $end
+$var wire 1 ; OUT[3]~output_o $end
+$var wire 1 < OUT[2]~output_o $end
+$var wire 1 = OUT[1]~output_o $end
+$var wire 1 > OUT[0]~output_o $end
+$var wire 1 ? clk~input_o $end
+$var wire 1 @ clk~inputclkctrl_outclk $end
+$var wire 1 A IN[4]~input_o $end
+$var wire 1 B IN[6]~input_o $end
+$var wire 1 C IN[5]~input_o $end
+$var wire 1 D IN[7]~input_o $end
+$var wire 1 E inst27|inst~0_combout $end
+$var wire 1 F IN[0]~input_o $end
+$var wire 1 G IN[3]~input_o $end
+$var wire 1 H IN[2]~input_o $end
+$var wire 1 I IN[1]~input_o $end
+$var wire 1 J inst27|inst~1_combout $end
+$var wire 1 K inst27|inst~combout $end
+$var wire 1 L Reset~input_o $end
+$var wire 1 M Reset~inputclkctrl_outclk $end
+$var wire 1 N inst24~q $end
+$var wire 1 O inst22~feeder_combout $end
+$var wire 1 P inst22~q $end
+$var wire 1 Q inst20~feeder_combout $end
+$var wire 1 R inst20~q $end
+$var wire 1 S inst18~feeder_combout $end
+$var wire 1 T inst18~q $end
+$var wire 1 U inst16~q $end
+$var wire 1 V inst14~feeder_combout $end
+$var wire 1 W inst14~q $end
+$var wire 1 X inst12~q $end
+$var wire 1 Y inst10~q $end
+$var wire 1 Z inst8~q $end
+$var wire 1 [ inst~q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+1#
+0$
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0-
+x.
+0/
+10
+x1
+12
+13
+14
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+1K
+1L
+1M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+$end
+#30000
+1!
+1?
+1@
+0.
+1N
+15
+1-
+#40000
+b1 "
+1F
+1.
+1J
+0K
+#60000
+0!
+0?
+0@
+0.
+#80000
+b11 "
+b10 "
+0F
+1I
+1.
+#90000
+1!
+1?
+1@
+0.
+1Z
+0N
+1=
+05
+1+
+0-
+#120000
+b11 "
+0!
+1F
+0?
+0@
+1.
+#150000
+1!
+1?
+1@
+0.
+1[
+1>
+1,
+#160000
+b111 "
+b101 "
+b100 "
+0F
+0I
+1H
+1.
+#180000
+0!
+0?
+0@
+0.
+#200000
+b101 "
+1F
+1.
+#210000
+1!
+1?
+1@
+0.
+0Z
+1Y
+0=
+1<
+0+
+1*
+#240000
+b111 "
+b110 "
+0!
+0F
+1I
+0?
+0@
+1.
+#270000
+1!
+1?
+1@
+0.
+0[
+1Z
+0>
+1=
+0,
+1+
+#280000
+b111 "
+1F
+1.
+#300000
+0!
+0?
+0@
+0.
+#320000
+b1111 "
+b1011 "
+b1001 "
+b1000 "
+0F
+0I
+0H
+1G
+1.
+#330000
+1!
+1?
+1@
+0.
+0Z
+0Y
+1X
+0=
+0<
+1;
+0+
+0*
+1)
+#360000
+b1001 "
+0!
+1F
+0?
+0@
+1.
+#390000
+1!
+1?
+1@
+0.
+1[
+1>
+1,
+#400000
+b1011 "
+b1010 "
+0F
+1I
+1.
+#420000
+0!
+0?
+0@
+0.
+#440000
+b1011 "
+1F
+1.
+#450000
+1!
+1?
+1@
+0.
+1Z
+1=
+1+
+#480000
+b1111 "
+b1101 "
+b1100 "
+0!
+0F
+0I
+1H
+0?
+0@
+1.
+#510000
+1!
+1?
+1@
+0.
+0[
+0Z
+1Y
+0>
+0=
+1<
+0,
+0+
+1*
+#520000
+b1101 "
+1F
+1.
+#540000
+0!
+0?
+0@
+0.
+#560000
+b1111 "
+b1110 "
+0F
+1I
+1.
+#570000
+1!
+1?
+1@
+0.
+1Z
+1=
+1+
+#600000
+b1111 "
+0!
+1F
+0?
+0@
+1.
+#630000
+1!
+1?
+1@
+0.
+1[
+1>
+1,
+#640000
+b11111 "
+b10111 "
+b10011 "
+b10001 "
+b10000 "
+0F
+0I
+0H
+0G
+1A
+1.
+0J
+1V
+1E
+#660000
+0!
+0?
+0@
+0.
+#680000
+b10001 "
+1F
+1.
+1J
+#690000
+1!
+1?
+1@
+0.
+0Z
+0Y
+0X
+1W
+0=
+0<
+0;
+1:
+0+
+0*
+0)
+1(
+#720000
+b10011 "
+b10010 "
+0!
+0F
+1I
+0?
+0@
+1.
+#750000
+1!
+1?
+1@
+0.
+0[
+1Z
+0>
+1=
+0,
+1+
+#760000
+b10011 "
+1F
+1.
+#780000
+0!
+0?
+0@
+0.
+#800000
+b10111 "
+b10101 "
+b10100 "
+0F
+0I
+1H
+1.
+#810000
+1!
+1?
+1@
+0.
+0Z
+1Y
+0=
+1<
+0+
+1*
+#840000
+b10101 "
+0!
+1F
+0?
+0@
+1.
+#870000
+1!
+1?
+1@
+0.
+1[
+1>
+1,
+#880000
+b10111 "
+b10110 "
+0F
+1I
+1.
+#900000
+0!
+0?
+0@
+0.
+#920000
+b10111 "
+1F
+1.
+#930000
+1!
+1?
+1@
+0.
+1Z
+1=
+1+
+#960000
+b11111 "
+b11011 "
+b11001 "
+b11000 "
+0!
+0F
+0I
+0H
+1G
+0?
+0@
+1.
+#990000
+1!
+1?
+1@
+0.
+0[
+0Z
+0Y
+1X
+0>
+0=
+0<
+1;
+0,
+0+
+0*
+1)
+#1000000

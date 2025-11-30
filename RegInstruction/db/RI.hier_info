@@ -1,0 +1,35 @@
+|RI
+OUT[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUT[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUT[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+OUT[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+OUT[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+OUT[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+OUT[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst.ACLR
+Reset => inst1.ACLR
+Reset => inst2.ACLR
+Reset => inst3.ACLR
+Reset => inst4.ACLR
+Reset => inst5.ACLR
+Reset => inst6.ACLR
+Reset => inst7.ACLR
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+clk => inst4.CLK
+clk => inst5.CLK
+clk => inst6.CLK
+clk => inst7.CLK
+IN[0] => inst.DATAIN
+IN[1] => inst1.DATAIN
+IN[2] => inst2.DATAIN
+IN[3] => inst3.DATAIN
+IN[4] => inst4.DATAIN
+IN[5] => inst5.DATAIN
+IN[6] => inst6.DATAIN
+IN[7] => inst7.DATAIN
+
+

@@ -1,0 +1,63 @@
+|AC
+Z <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst24.ACLR
+Reset => inst22.ACLR
+Reset => inst.ACLR
+Reset => inst8.ACLR
+Reset => inst10.ACLR
+Reset => inst12.ACLR
+Reset => inst14.ACLR
+Reset => inst16.ACLR
+Reset => inst18.ACLR
+Reset => inst20.ACLR
+clk => inst24.CLK
+clk => inst22.CLK
+clk => inst.CLK
+clk => inst8.CLK
+clk => inst10.CLK
+clk => inst12.CLK
+clk => inst14.CLK
+clk => inst16.CLK
+clk => inst18.CLK
+clk => inst20.CLK
+IN[0] => flagLogic:inst27.IN[0]
+IN[0] => inst.DATAIN
+IN[1] => flagLogic:inst27.IN[1]
+IN[1] => inst8.DATAIN
+IN[2] => flagLogic:inst27.IN[2]
+IN[2] => inst10.DATAIN
+IN[3] => flagLogic:inst27.IN[3]
+IN[3] => inst12.DATAIN
+IN[4] => flagLogic:inst27.IN[4]
+IN[4] => inst14.DATAIN
+IN[5] => flagLogic:inst27.IN[5]
+IN[5] => inst16.DATAIN
+IN[6] => flagLogic:inst27.IN[6]
+IN[6] => inst18.DATAIN
+IN[7] => flagLogic:inst27.IN[7]
+IN[7] => inst20.DATAIN
+N <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+OUT[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUT[1] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+OUT[2] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+OUT[4] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+OUT[5] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+OUT[6] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+OUT[7] <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AC|flagLogic:inst27
+N <= IN[7].DB_MAX_OUTPUT_PORT_TYPE
+IN[0] => inst.IN0
+IN[1] => inst.IN2
+IN[2] => inst.IN1
+IN[3] => inst.IN3
+IN[4] => inst.IN5
+IN[5] => inst.IN4
+IN[6] => inst.IN6
+IN[7] => N.DATAIN
+IN[7] => inst.IN7
+Z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
