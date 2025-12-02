@@ -1,0 +1,206 @@
+|UC
+incPC <= incPC_logic:inst14.incPC
+STA => incPC_logic:inst14.STA
+STA => sel_LOGIC:inst.STA
+STA => inst18.IN1
+STA => GO_t0_LOGIC:inst29.STA
+STA => inst16.IN1
+STA => REM_CH_LOGIC:inst100.STA
+STA => READ_LOGIC:inst17.STA
+LDA => incPC_logic:inst14.LDA
+LDA => sel_LOGIC:inst.LDA
+LDA => inst19.IN1
+LDA => AC_CH_LOGIC:inst24.LDA
+LDA => GO_t0_LOGIC:inst29.LDA
+LDA => REM_CH_LOGIC:inst100.LDA
+LDA => READ_LOGIC:inst17.LDA
+ADD => incPC_logic:inst14.ADD
+ADD => sel_LOGIC:inst.ADD
+ADD => AC_CH_LOGIC:inst24.ADD
+ADD => GO_t0_LOGIC:inst29.ADD
+ADD => REM_CH_LOGIC:inst100.ADD
+ADD => READ_LOGIC:inst17.ADD
+ADD => inst20.IN1
+AND => incPC_logic:inst14.AND
+AND => sel_LOGIC:inst.AND
+AND => AC_CH_LOGIC:inst24.AND
+AND => GO_t0_LOGIC:inst29.AND
+AND => REM_CH_LOGIC:inst100.AND
+AND => READ_LOGIC:inst17.AND
+AND => inst21.IN1
+OR => incPC_logic:inst14.OR
+OR => sel_LOGIC:inst.OR
+OR => AC_CH_LOGIC:inst24.OR
+OR => GO_t0_LOGIC:inst29.OR
+OR => REM_CH_LOGIC:inst100.OR
+OR => READ_LOGIC:inst17.OR
+OR => inst22.IN1
+JN => incPC_logic:inst14.JN
+JN => inst27.IN0
+JN => GO_t0_LOGIC:inst29.JN
+JN => REM_CH_LOGIC:inst100.JN
+JN => READ_LOGIC:inst17.JN
+JZ => incPC_logic:inst14.JZ
+JZ => inst28.IN0
+JZ => GO_t0_LOGIC:inst29.JZ
+JZ => REM_CH_LOGIC:inst100.JZ
+JZ => READ_LOGIC:inst17.JZ
+flagN => incPC_logic:inst14.flagN
+flagN => inst27.IN1
+flagN => GO_t0_LOGIC:inst29.flagN
+flagN => GO_t0_LOGIC:inst29.flagZ
+flagN => REM_CH_LOGIC:inst100.flagN
+flagN => READ_LOGIC:inst17.flagN
+flagZ => incPC_logic:inst14.flagZ
+flagZ => inst28.IN1
+flagZ => REM_CH_LOGIC:inst100.flagZ
+flagZ => READ_LOGIC:inst17.flagZ
+t[0] => REM_CH_LOGIC:inst100.t0
+t[1] => incPC_logic:inst14.t1
+t[1] => READ_LOGIC:inst17.t1
+t[2] => RI_CH.DATAIN
+t[3] => incPC_logic:inst14.t3
+t[3] => inst23.IN0
+t[3] => AC_CH_LOGIC:inst24.t3
+t[3] => GO_t0_LOGIC:inst29.t3
+t[3] => REM_CH_LOGIC:inst100.t3
+t[4] => incPC_logic:inst14.t4
+t[4] => READ_LOGIC:inst17.t4
+t[5] => sel_LOGIC:inst.t[5]
+t[5] => inst25.IN1
+t[5] => GO_t0_LOGIC:inst29.t5
+t[5] => REM_CH_LOGIC:inst100.t5
+t[6] => inst16.IN0
+t[6] => READ_LOGIC:inst17.t6
+t[7] => inst18.IN0
+t[7] => inst19.IN0
+t[7] => AC_CH_LOGIC:inst24.t7
+t[7] => GO_t0_LOGIC:inst29.t7
+t[7] => inst20.IN0
+t[7] => inst22.IN0
+t[7] => inst21.IN0
+sel <= sel_LOGIC:inst.sel
+Write <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+Y_ULA <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+NOT_ULA <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+NOT => inst23.IN1
+NOT => AC_CH_LOGIC:inst24.NOT
+NOT => GO_t0_LOGIC:inst29.NOT
+AC_CH <= AC_CH_LOGIC:inst24.AC_CH
+NZ_CH <= AC_CH_LOGIC:inst24.AC_CH
+PC_CH <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+JMP => inst26.IN1
+JMP => GO_t0_LOGIC:inst29.JMP
+JMP => REM_CH_LOGIC:inst100.JMP
+JMP => READ_LOGIC:inst17.JMP
+GO_t0 <= GO_t0_LOGIC:inst29.GO_t0
+NOP => GO_t0_LOGIC:inst29.NOP
+HLT => GO_t0_LOGIC:inst29.HLT
+RDM_CH <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+REM_CH <= REM_CH_LOGIC:inst100.REM_CH
+RI_CH <= t[2].DB_MAX_OUTPUT_PORT_TYPE
+Read <= READ_LOGIC:inst17.READ
+ADD_ULA <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+OR_ULA <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+AND_ULA <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UC|incPC_logic:inst14
+incPC <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+JZ => inst6.IN0
+flagZ => inst1.IN0
+flagN => inst.IN0
+JN => inst8.IN1
+t3 => inst3.IN1
+t4 => inst4.IN0
+STA => inst7.IN0
+ADD => inst7.IN1
+LDA => inst7.IN2
+AND => inst7.IN3
+OR => inst7.IN4
+t1 => inst2.IN2
+
+
+|UC|sel_LOGIC:inst
+sel <= inst.DB_MAX_OUTPUT_PORT_TYPE
+t[5] => inst.IN0
+STA => inst7.IN0
+ADD => inst7.IN1
+LDA => inst7.IN2
+AND => inst7.IN3
+OR => inst7.IN4
+
+
+|UC|AC_CH_LOGIC:inst24
+AC_CH <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+t7 => inst.IN0
+LDA => inst2.IN0
+AND => inst2.IN1
+OR => inst2.IN2
+ADD => inst2.IN3
+t3 => inst1.IN0
+NOT => inst1.IN1
+
+
+|UC|GO_t0_LOGIC:inst29
+GO_t0 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+t3 => inst10.IN0
+NOP => inst2.IN0
+JZ => inst11.IN0
+JZ => inst6.IN1
+flagZ => inst13.IN0
+flagZ => inst6.IN0
+JN => inst12.IN0
+JN => inst5.IN1
+flagN => inst14.IN0
+flagN => inst5.IN0
+NOT => inst2.IN3
+JMP => inst.IN2
+t5 => inst8.IN1
+t7 => inst9.IN0
+STA => inst7.IN0
+ADD => inst7.IN1
+LDA => inst7.IN2
+AND => inst7.IN3
+OR => inst7.IN4
+HLT => ~NO_FANOUT~
+
+
+|UC|REM_CH_LOGIC:inst100
+REM_CH <= inst.DB_MAX_OUTPUT_PORT_TYPE
+t5 => inst1.IN0
+STA => inst7.IN0
+ADD => inst7.IN1
+LDA => inst7.IN2
+AND => inst7.IN3
+OR => inst7.IN4
+t3 => inst2.IN0
+flagN => inst4.IN0
+JN => inst4.IN1
+flagZ => inst5.IN0
+JZ => inst5.IN1
+t0 => inst.IN2
+JMP => ~NO_FANOUT~
+
+
+|UC|READ_LOGIC:inst17
+READ <= inst.DB_MAX_OUTPUT_PORT_TYPE
+t4 => inst6.IN0
+STA => inst3.IN0
+ADD => inst3.IN1
+ADD => inst2.IN3
+LDA => inst3.IN2
+LDA => inst2.IN0
+AND => inst3.IN3
+AND => inst2.IN1
+JMP => inst3.IN4
+OR => inst3.IN5
+OR => inst2.IN2
+JN => inst5.IN0
+flagN => inst5.IN1
+JZ => inst4.IN0
+flagZ => inst4.IN1
+t6 => inst7.IN1
+t1 => inst.IN2
+
+

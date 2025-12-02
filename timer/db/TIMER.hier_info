@@ -1,0 +1,94 @@
+|TIMER
+t[0] <= Decoder:inst19.S[0]
+t[1] <= Decoder:inst19.S[1]
+t[2] <= Decoder:inst19.S[2]
+t[3] <= Decoder:inst19.S[3]
+t[4] <= Decoder:inst19.S[4]
+t[5] <= Decoder:inst19.S[5]
+t[6] <= Decoder:inst19.S[6]
+t[7] <= Decoder:inst19.S[7]
+clk => inst999.CLK
+clk => inst800.CLK
+clk => inst2.CLK
+GO_t0 => Multiplexador:inst17.Sel
+GO_t0 => Multiplexador:inst36.Sel
+GO_t0 => Multiplexador:inst37.Sel
+enable => Multiplexador:inst9.Sel
+enable => Multiplexador:inst34.Sel
+enable => Multiplexador:inst35.Sel
+
+
+|TIMER|Decoder:inst19
+S[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst1.IN0
+A[0] => inst17.IN0
+A[0] => inst15.IN0
+A[0] => inst16.IN0
+A[0] => inst14.IN0
+A[1] => inst2.IN0
+A[1] => inst17.IN1
+A[1] => inst13.IN1
+A[1] => inst16.IN1
+A[1] => inst12.IN1
+A[2] => inst3.IN0
+A[2] => inst17.IN2
+A[2] => inst13.IN2
+A[2] => inst11.IN2
+A[2] => inst14.IN2
+
+
+|TIMER|Multiplexador:inst17
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|TIMER|Multiplexador:inst9
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|TIMER|Multiplexador:inst36
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|TIMER|Multiplexador:inst34
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|TIMER|Multiplexador:inst37
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|TIMER|Multiplexador:inst35
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+

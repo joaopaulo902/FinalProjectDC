@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AC
-Sat Nov 29 21:56:11 2025
+Tue Dec 02 15:43:54 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 29 21:56:11 2025      ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 02 15:43:54 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; AC                                         ;
 ; Top-level Entity Name              ; AC                                         ;
@@ -50,7 +50,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 3                                          ;
 ;     Dedicated logic registers      ; 10                                         ;
 ; Total registers                    ; 10                                         ;
-; Total pins                         ; 20                                         ;
+; Total pins                         ; 22                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -159,14 +159,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
-; AC.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/acumulador/AC.bdf        ;         ;
-; flagLogic.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/acumulador/flagLogic.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------+---------+
+; AC.bdf                           ; yes             ; User Block Diagram/Schematic File        ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/acumulador/AC.bdf            ;         ;
+; flagLogic.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/acumulador/flagLogic.bdf     ;         ;
+; multiplexador.bdf                ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/acumulador/multiplexador.bdf ;         ;
++----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -174,12 +175,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+------------------+
 ; Resource                 ; Usage            ;
 +--------------------------+------------------+
-; I/O pins                 ; 20               ;
+; I/O pins                 ; 22               ;
 ; DSP block 9-bit elements ; 0                ;
 ; Maximum fan-out node     ; clk~input        ;
 ; Maximum fan-out          ; 10               ;
-; Total fan-out            ; 70               ;
-; Average fan-out          ; 1.32             ;
+; Total fan-out            ; 82               ;
+; Average fan-out          ; 1.44             ;
 +--------------------------+------------------+
 
 
@@ -188,7 +189,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------+--------------+
-; |AC                        ; 3 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 20   ; 0            ; |AC                  ; work         ;
+; |AC                        ; 3 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 22   ; 0            ; |AC                  ; work         ;
 ;    |flagLogic:inst27|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |AC|flagLogic:inst27 ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -204,7 +205,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -224,7 +225,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Nov 29 21:56:10 2025
+    Info: Processing started: Tue Dec 02 15:43:53 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AC -c AC
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file ac.bdf
@@ -232,17 +233,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file ac.bdf
 Info (12021): Found 1 design units, including 1 entities, in source file flaglogic.bdf
     Info (12023): Found entity 1: flagLogic
 Info (12127): Elaborating entity "AC" for the top level hierarchy
+Warning (12125): Using design file multiplexador.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Multiplexador
+Info (12128): Elaborating entity "Multiplexador" for hierarchy "Multiplexador:inst26"
 Info (12128): Elaborating entity "flagLogic" for hierarchy "flagLogic:inst27"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 32 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
+Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 12 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4683 megabytes
-    Info: Processing ended: Sat Nov 29 21:56:11 2025
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4675 megabytes
+    Info: Processing ended: Tue Dec 02 15:43:54 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

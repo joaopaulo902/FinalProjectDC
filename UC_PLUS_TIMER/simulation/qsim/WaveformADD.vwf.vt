@@ -1,0 +1,769 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/02/2025 11:38:15"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    UC_PLUS_TIMER
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module UC_PLUS_TIMER_vlg_sample_tst(
+	ADD,
+	AND,
+	clk,
+	flagN,
+	flagZ,
+	HLT,
+	JMP,
+	JN,
+	JZ,
+	LDA,
+	NOP,
+	NOT,
+	OR,
+	Reset,
+	STA,
+	sampler_tx
+);
+input  ADD;
+input  AND;
+input  clk;
+input  flagN;
+input  flagZ;
+input  HLT;
+input  JMP;
+input  JN;
+input  JZ;
+input  LDA;
+input  NOP;
+input  NOT;
+input  OR;
+input  Reset;
+input  STA;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(ADD or AND or clk or flagN or flagZ or HLT or JMP or JN or JZ or LDA or NOP or NOT or OR or Reset or STA)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module UC_PLUS_TIMER_vlg_check_tst (
+	AC_CH,
+	ADD_ULA,
+	AND_ULA,
+	incPC,
+	NOT_ULA,
+	NZ_CH,
+	OR_ULA,
+	PC_CH,
+	RDM_CH,
+	Read,
+	REM_CH,
+	RI_CH,
+	sel,
+	Write,
+	Y_ULA,
+	sampler_rx
+);
+input  AC_CH;
+input  ADD_ULA;
+input  AND_ULA;
+input  incPC;
+input  NOT_ULA;
+input  NZ_CH;
+input  OR_ULA;
+input  PC_CH;
+input  RDM_CH;
+input  Read;
+input  REM_CH;
+input  RI_CH;
+input  sel;
+input  Write;
+input  Y_ULA;
+input sampler_rx;
+
+reg  AC_CH_expected;
+reg  ADD_ULA_expected;
+reg  AND_ULA_expected;
+reg  incPC_expected;
+reg  NOT_ULA_expected;
+reg  NZ_CH_expected;
+reg  OR_ULA_expected;
+reg  PC_CH_expected;
+reg  RDM_CH_expected;
+reg  Read_expected;
+reg  REM_CH_expected;
+reg  RI_CH_expected;
+reg  sel_expected;
+reg  Write_expected;
+reg  Y_ULA_expected;
+
+reg  AC_CH_prev;
+reg  ADD_ULA_prev;
+reg  AND_ULA_prev;
+reg  incPC_prev;
+reg  NOT_ULA_prev;
+reg  NZ_CH_prev;
+reg  OR_ULA_prev;
+reg  PC_CH_prev;
+reg  RDM_CH_prev;
+reg  Read_prev;
+reg  REM_CH_prev;
+reg  RI_CH_prev;
+reg  sel_prev;
+reg  Write_prev;
+reg  Y_ULA_prev;
+
+reg  AC_CH_expected_prev;
+reg  ADD_ULA_expected_prev;
+reg  AND_ULA_expected_prev;
+reg  incPC_expected_prev;
+reg  NOT_ULA_expected_prev;
+reg  NZ_CH_expected_prev;
+reg  OR_ULA_expected_prev;
+reg  PC_CH_expected_prev;
+reg  RDM_CH_expected_prev;
+reg  Read_expected_prev;
+reg  REM_CH_expected_prev;
+reg  RI_CH_expected_prev;
+reg  sel_expected_prev;
+reg  Write_expected_prev;
+reg  Y_ULA_expected_prev;
+
+reg  last_AC_CH_exp;
+reg  last_ADD_ULA_exp;
+reg  last_AND_ULA_exp;
+reg  last_incPC_exp;
+reg  last_NOT_ULA_exp;
+reg  last_NZ_CH_exp;
+reg  last_OR_ULA_exp;
+reg  last_PC_CH_exp;
+reg  last_RDM_CH_exp;
+reg  last_Read_exp;
+reg  last_REM_CH_exp;
+reg  last_RI_CH_exp;
+reg  last_sel_exp;
+reg  last_Write_exp;
+reg  last_Y_ULA_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:15] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 15'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	AC_CH_prev = AC_CH;
+	ADD_ULA_prev = ADD_ULA;
+	AND_ULA_prev = AND_ULA;
+	incPC_prev = incPC;
+	NOT_ULA_prev = NOT_ULA;
+	NZ_CH_prev = NZ_CH;
+	OR_ULA_prev = OR_ULA;
+	PC_CH_prev = PC_CH;
+	RDM_CH_prev = RDM_CH;
+	Read_prev = Read;
+	REM_CH_prev = REM_CH;
+	RI_CH_prev = RI_CH;
+	sel_prev = sel;
+	Write_prev = Write;
+	Y_ULA_prev = Y_ULA;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	AC_CH_expected_prev = AC_CH_expected;
+	ADD_ULA_expected_prev = ADD_ULA_expected;
+	AND_ULA_expected_prev = AND_ULA_expected;
+	incPC_expected_prev = incPC_expected;
+	NOT_ULA_expected_prev = NOT_ULA_expected;
+	NZ_CH_expected_prev = NZ_CH_expected;
+	OR_ULA_expected_prev = OR_ULA_expected;
+	PC_CH_expected_prev = PC_CH_expected;
+	RDM_CH_expected_prev = RDM_CH_expected;
+	Read_expected_prev = Read_expected;
+	REM_CH_expected_prev = REM_CH_expected;
+	RI_CH_expected_prev = RI_CH_expected;
+	sel_expected_prev = sel_expected;
+	Write_expected_prev = Write_expected;
+	Y_ULA_expected_prev = Y_ULA_expected;
+end
+
+
+
+// expected sel
+initial
+begin
+	sel_expected = 1'bX;
+end 
+
+// expected REM_CH
+initial
+begin
+	REM_CH_expected = 1'bX;
+end 
+
+// expected Read
+initial
+begin
+	Read_expected = 1'bX;
+end 
+
+// expected incPC
+initial
+begin
+	incPC_expected = 1'bX;
+end 
+
+// expected RI_CH
+initial
+begin
+	RI_CH_expected = 1'bX;
+end 
+
+// expected ADD_ULA
+initial
+begin
+	ADD_ULA_expected = 1'bX;
+end 
+
+// expected AC_CH
+initial
+begin
+	AC_CH_expected = 1'bX;
+end 
+
+// expected NZ_CH
+initial
+begin
+	NZ_CH_expected = 1'bX;
+end 
+
+// expected AND_ULA
+initial
+begin
+	AND_ULA_expected = 1'bX;
+end 
+
+// expected NOT_ULA
+initial
+begin
+	NOT_ULA_expected = 1'bX;
+end 
+
+// expected OR_ULA
+initial
+begin
+	OR_ULA_expected = 1'bX;
+end 
+
+// expected PC_CH
+initial
+begin
+	PC_CH_expected = 1'bX;
+end 
+
+// expected RDM_CH
+initial
+begin
+	RDM_CH_expected = 1'bX;
+end 
+
+// expected Write
+initial
+begin
+	Write_expected = 1'bX;
+end 
+
+// expected Y_ULA
+initial
+begin
+	Y_ULA_expected = 1'bX;
+end 
+// generate trigger
+always @(AC_CH_expected or AC_CH or ADD_ULA_expected or ADD_ULA or AND_ULA_expected or AND_ULA or incPC_expected or incPC or NOT_ULA_expected or NOT_ULA or NZ_CH_expected or NZ_CH or OR_ULA_expected or OR_ULA or PC_CH_expected or PC_CH or RDM_CH_expected or RDM_CH or Read_expected or Read or REM_CH_expected or REM_CH or RI_CH_expected or RI_CH or sel_expected or sel or Write_expected or Write or Y_ULA_expected or Y_ULA)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected AC_CH = %b | expected ADD_ULA = %b | expected AND_ULA = %b | expected incPC = %b | expected NOT_ULA = %b | expected NZ_CH = %b | expected OR_ULA = %b | expected PC_CH = %b | expected RDM_CH = %b | expected Read = %b | expected REM_CH = %b | expected RI_CH = %b | expected sel = %b | expected Write = %b | expected Y_ULA = %b | ",AC_CH_expected_prev,ADD_ULA_expected_prev,AND_ULA_expected_prev,incPC_expected_prev,NOT_ULA_expected_prev,NZ_CH_expected_prev,OR_ULA_expected_prev,PC_CH_expected_prev,RDM_CH_expected_prev,Read_expected_prev,REM_CH_expected_prev,RI_CH_expected_prev,sel_expected_prev,Write_expected_prev,Y_ULA_expected_prev);
+	$display("| real AC_CH = %b | real ADD_ULA = %b | real AND_ULA = %b | real incPC = %b | real NOT_ULA = %b | real NZ_CH = %b | real OR_ULA = %b | real PC_CH = %b | real RDM_CH = %b | real Read = %b | real REM_CH = %b | real RI_CH = %b | real sel = %b | real Write = %b | real Y_ULA = %b | ",AC_CH_prev,ADD_ULA_prev,AND_ULA_prev,incPC_prev,NOT_ULA_prev,NZ_CH_prev,OR_ULA_prev,PC_CH_prev,RDM_CH_prev,Read_prev,REM_CH_prev,RI_CH_prev,sel_prev,Write_prev,Y_ULA_prev);
+`endif
+	if (
+		( AC_CH_expected_prev !== 1'bx ) && ( AC_CH_prev !== AC_CH_expected_prev )
+		&& ((AC_CH_expected_prev !== last_AC_CH_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AC_CH :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AC_CH_expected_prev);
+		$display ("     Real value = %b", AC_CH_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_AC_CH_exp = AC_CH_expected_prev;
+	end
+	if (
+		( ADD_ULA_expected_prev !== 1'bx ) && ( ADD_ULA_prev !== ADD_ULA_expected_prev )
+		&& ((ADD_ULA_expected_prev !== last_ADD_ULA_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ADD_ULA :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ADD_ULA_expected_prev);
+		$display ("     Real value = %b", ADD_ULA_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_ADD_ULA_exp = ADD_ULA_expected_prev;
+	end
+	if (
+		( AND_ULA_expected_prev !== 1'bx ) && ( AND_ULA_prev !== AND_ULA_expected_prev )
+		&& ((AND_ULA_expected_prev !== last_AND_ULA_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AND_ULA :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AND_ULA_expected_prev);
+		$display ("     Real value = %b", AND_ULA_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_AND_ULA_exp = AND_ULA_expected_prev;
+	end
+	if (
+		( incPC_expected_prev !== 1'bx ) && ( incPC_prev !== incPC_expected_prev )
+		&& ((incPC_expected_prev !== last_incPC_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port incPC :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", incPC_expected_prev);
+		$display ("     Real value = %b", incPC_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_incPC_exp = incPC_expected_prev;
+	end
+	if (
+		( NOT_ULA_expected_prev !== 1'bx ) && ( NOT_ULA_prev !== NOT_ULA_expected_prev )
+		&& ((NOT_ULA_expected_prev !== last_NOT_ULA_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port NOT_ULA :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", NOT_ULA_expected_prev);
+		$display ("     Real value = %b", NOT_ULA_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_NOT_ULA_exp = NOT_ULA_expected_prev;
+	end
+	if (
+		( NZ_CH_expected_prev !== 1'bx ) && ( NZ_CH_prev !== NZ_CH_expected_prev )
+		&& ((NZ_CH_expected_prev !== last_NZ_CH_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port NZ_CH :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", NZ_CH_expected_prev);
+		$display ("     Real value = %b", NZ_CH_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_NZ_CH_exp = NZ_CH_expected_prev;
+	end
+	if (
+		( OR_ULA_expected_prev !== 1'bx ) && ( OR_ULA_prev !== OR_ULA_expected_prev )
+		&& ((OR_ULA_expected_prev !== last_OR_ULA_exp) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OR_ULA :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OR_ULA_expected_prev);
+		$display ("     Real value = %b", OR_ULA_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_OR_ULA_exp = OR_ULA_expected_prev;
+	end
+	if (
+		( PC_CH_expected_prev !== 1'bx ) && ( PC_CH_prev !== PC_CH_expected_prev )
+		&& ((PC_CH_expected_prev !== last_PC_CH_exp) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PC_CH :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PC_CH_expected_prev);
+		$display ("     Real value = %b", PC_CH_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_PC_CH_exp = PC_CH_expected_prev;
+	end
+	if (
+		( RDM_CH_expected_prev !== 1'bx ) && ( RDM_CH_prev !== RDM_CH_expected_prev )
+		&& ((RDM_CH_expected_prev !== last_RDM_CH_exp) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RDM_CH :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RDM_CH_expected_prev);
+		$display ("     Real value = %b", RDM_CH_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_RDM_CH_exp = RDM_CH_expected_prev;
+	end
+	if (
+		( Read_expected_prev !== 1'bx ) && ( Read_prev !== Read_expected_prev )
+		&& ((Read_expected_prev !== last_Read_exp) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Read :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Read_expected_prev);
+		$display ("     Real value = %b", Read_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_Read_exp = Read_expected_prev;
+	end
+	if (
+		( REM_CH_expected_prev !== 1'bx ) && ( REM_CH_prev !== REM_CH_expected_prev )
+		&& ((REM_CH_expected_prev !== last_REM_CH_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port REM_CH :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", REM_CH_expected_prev);
+		$display ("     Real value = %b", REM_CH_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_REM_CH_exp = REM_CH_expected_prev;
+	end
+	if (
+		( RI_CH_expected_prev !== 1'bx ) && ( RI_CH_prev !== RI_CH_expected_prev )
+		&& ((RI_CH_expected_prev !== last_RI_CH_exp) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RI_CH :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RI_CH_expected_prev);
+		$display ("     Real value = %b", RI_CH_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_RI_CH_exp = RI_CH_expected_prev;
+	end
+	if (
+		( sel_expected_prev !== 1'bx ) && ( sel_prev !== sel_expected_prev )
+		&& ((sel_expected_prev !== last_sel_exp) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sel :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sel_expected_prev);
+		$display ("     Real value = %b", sel_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_sel_exp = sel_expected_prev;
+	end
+	if (
+		( Write_expected_prev !== 1'bx ) && ( Write_prev !== Write_expected_prev )
+		&& ((Write_expected_prev !== last_Write_exp) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Write :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Write_expected_prev);
+		$display ("     Real value = %b", Write_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_Write_exp = Write_expected_prev;
+	end
+	if (
+		( Y_ULA_expected_prev !== 1'bx ) && ( Y_ULA_prev !== Y_ULA_expected_prev )
+		&& ((Y_ULA_expected_prev !== last_Y_ULA_exp) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Y_ULA :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Y_ULA_expected_prev);
+		$display ("     Real value = %b", Y_ULA_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_Y_ULA_exp = Y_ULA_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module UC_PLUS_TIMER_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg ADD;
+reg AND;
+reg clk;
+reg flagN;
+reg flagZ;
+reg HLT;
+reg JMP;
+reg JN;
+reg JZ;
+reg LDA;
+reg NOP;
+reg NOT;
+reg OR;
+reg Reset;
+reg STA;
+// wires                                               
+wire AC_CH;
+wire ADD_ULA;
+wire AND_ULA;
+wire incPC;
+wire NOT_ULA;
+wire NZ_CH;
+wire OR_ULA;
+wire PC_CH;
+wire RDM_CH;
+wire Read;
+wire REM_CH;
+wire RI_CH;
+wire sel;
+wire Write;
+wire Y_ULA;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+UC_PLUS_TIMER i1 (
+// port map - connection between master ports and signals/registers   
+	.AC_CH(AC_CH),
+	.ADD(ADD),
+	.ADD_ULA(ADD_ULA),
+	.\AND (AND),
+	.AND_ULA(AND_ULA),
+	.clk(clk),
+	.flagN(flagN),
+	.flagZ(flagZ),
+	.HLT(HLT),
+	.incPC(incPC),
+	.JMP(JMP),
+	.JN(JN),
+	.JZ(JZ),
+	.LDA(LDA),
+	.NOP(NOP),
+	.\NOT (NOT),
+	.NOT_ULA(NOT_ULA),
+	.NZ_CH(NZ_CH),
+	.\OR (OR),
+	.OR_ULA(OR_ULA),
+	.PC_CH(PC_CH),
+	.RDM_CH(RDM_CH),
+	.Read(Read),
+	.REM_CH(REM_CH),
+	.Reset(Reset),
+	.RI_CH(RI_CH),
+	.sel(sel),
+	.STA(STA),
+	.Write(Write),
+	.Y_ULA(Y_ULA)
+);
+
+// clk
+initial
+begin
+	clk = 1'b0;
+	clk = #60000 1'b1;
+	# 30000;
+	repeat(15)
+	begin
+		clk = 1'b0;
+		clk = #30000 1'b1;
+		# 30000;
+	end
+	clk = 1'b0;
+end 
+
+// ADD
+initial
+begin
+	ADD = 1'b1;
+	ADD = #480000 1'b0;
+end 
+
+// AND
+initial
+begin
+	AND = 1'b0;
+end 
+
+// flagN
+initial
+begin
+	flagN = 1'b0;
+end 
+
+// flagZ
+initial
+begin
+	flagZ = 1'b0;
+end 
+
+// HLT
+initial
+begin
+	HLT = 1'b0;
+end 
+
+// JMP
+initial
+begin
+	JMP = 1'b0;
+end 
+
+// JN
+initial
+begin
+	JN = 1'b0;
+end 
+
+// JZ
+initial
+begin
+	JZ = 1'b0;
+end 
+
+// LDA
+initial
+begin
+	LDA = 1'b0;
+end 
+
+// NOP
+initial
+begin
+	NOP = 1'b0;
+end 
+
+// NOT
+initial
+begin
+	NOT = 1'b0;
+end 
+
+// OR
+initial
+begin
+	OR = 1'b0;
+end 
+
+// Reset
+initial
+begin
+	Reset = 1'b0;
+	Reset = #40000 1'b1;
+end 
+
+// STA
+initial
+begin
+	STA = 1'b0;
+end 
+
+UC_PLUS_TIMER_vlg_sample_tst tb_sample (
+	.ADD(ADD),
+	.AND(AND),
+	.clk(clk),
+	.flagN(flagN),
+	.flagZ(flagZ),
+	.HLT(HLT),
+	.JMP(JMP),
+	.JN(JN),
+	.JZ(JZ),
+	.LDA(LDA),
+	.NOP(NOP),
+	.NOT(NOT),
+	.OR(OR),
+	.Reset(Reset),
+	.STA(STA),
+	.sampler_tx(sampler)
+);
+
+UC_PLUS_TIMER_vlg_check_tst tb_out(
+	.AC_CH(AC_CH),
+	.ADD_ULA(ADD_ULA),
+	.AND_ULA(AND_ULA),
+	.incPC(incPC),
+	.NOT_ULA(NOT_ULA),
+	.NZ_CH(NZ_CH),
+	.OR_ULA(OR_ULA),
+	.PC_CH(PC_CH),
+	.RDM_CH(RDM_CH),
+	.Read(Read),
+	.REM_CH(REM_CH),
+	.RI_CH(RI_CH),
+	.sel(sel),
+	.Write(Write),
+	.Y_ULA(Y_ULA),
+	.sampler_rx(sampler)
+);
+endmodule
+

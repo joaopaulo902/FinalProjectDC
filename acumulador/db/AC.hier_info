@@ -1,50 +1,68 @@
 |AC
-Z <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+flagN <= inst24.DB_MAX_OUTPUT_PORT_TYPE
 Reset => inst24.ACLR
-Reset => inst22.ACLR
+Reset => inst28.ACLR
 Reset => inst.ACLR
-Reset => inst8.ACLR
-Reset => inst10.ACLR
+Reset => inst2.ACLR
+Reset => inst4.ACLR
+Reset => inst6.ACLR
 Reset => inst12.ACLR
-Reset => inst14.ACLR
-Reset => inst16.ACLR
+Reset => inst15.ACLR
 Reset => inst18.ACLR
-Reset => inst20.ACLR
+Reset => inst21.ACLR
 clk => inst24.CLK
-clk => inst22.CLK
+clk => inst28.CLK
 clk => inst.CLK
-clk => inst8.CLK
-clk => inst10.CLK
+clk => inst2.CLK
+clk => inst4.CLK
+clk => inst6.CLK
 clk => inst12.CLK
-clk => inst14.CLK
-clk => inst16.CLK
+clk => inst15.CLK
 clk => inst18.CLK
-clk => inst20.CLK
+clk => inst21.CLK
+NZ_CH => Multiplexador:inst26.Sel
+NZ_CH => Multiplexador:inst30.Sel
 IN[0] => flagLogic:inst27.IN[0]
-IN[0] => inst.DATAIN
+IN[0] => Multiplexador:inst1.B
 IN[1] => flagLogic:inst27.IN[1]
-IN[1] => inst8.DATAIN
+IN[1] => Multiplexador:inst3.B
 IN[2] => flagLogic:inst27.IN[2]
-IN[2] => inst10.DATAIN
+IN[2] => Multiplexador:inst5.B
 IN[3] => flagLogic:inst27.IN[3]
-IN[3] => inst12.DATAIN
+IN[3] => Multiplexador:inst11.B
 IN[4] => flagLogic:inst27.IN[4]
-IN[4] => inst14.DATAIN
+IN[4] => Multiplexador:inst14.B
 IN[5] => flagLogic:inst27.IN[5]
-IN[5] => inst16.DATAIN
+IN[5] => Multiplexador:inst17.B
 IN[6] => flagLogic:inst27.IN[6]
-IN[6] => inst18.DATAIN
+IN[6] => Multiplexador:inst20.B
 IN[7] => flagLogic:inst27.IN[7]
-IN[7] => inst20.DATAIN
-N <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+IN[7] => Multiplexador:inst23.B
+flagZ <= inst28.DB_MAX_OUTPUT_PORT_TYPE
 OUT[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-OUT[1] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
-OUT[2] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
-OUT[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
-OUT[4] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
-OUT[5] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+OUT[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUT[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+OUT[4] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+OUT[5] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
 OUT[6] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
-OUT[7] <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+OUT[7] <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+AC_CH => Multiplexador:inst1.Sel
+AC_CH => Multiplexador:inst3.Sel
+AC_CH => Multiplexador:inst5.Sel
+AC_CH => Multiplexador:inst11.Sel
+AC_CH => Multiplexador:inst14.Sel
+AC_CH => Multiplexador:inst17.Sel
+AC_CH => Multiplexador:inst20.Sel
+AC_CH => Multiplexador:inst23.Sel
+
+
+|AC|Multiplexador:inst26
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
 
 
 |AC|flagLogic:inst27
@@ -59,5 +77,77 @@ IN[6] => inst.IN6
 IN[7] => N.DATAIN
 IN[7] => inst.IN7
 Z <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AC|Multiplexador:inst30
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|AC|Multiplexador:inst1
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|AC|Multiplexador:inst3
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|AC|Multiplexador:inst5
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|AC|Multiplexador:inst11
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|AC|Multiplexador:inst14
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|AC|Multiplexador:inst17
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|AC|Multiplexador:inst20
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|AC|Multiplexador:inst23
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
 
 

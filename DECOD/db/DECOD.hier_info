@@ -1,0 +1,73 @@
+|DECOD
+LDA <= Decoder:inst.ADD
+In[0] => Decoder:inst.A[0]
+In[1] => Decoder:inst.A[1]
+In[2] => Decoder:inst.A[2]
+In[3] => Decoder:inst.A[3]
+ADD <= Decoder:inst.AND
+AND <= Decoder:inst.OR
+OR <= Decoder:inst.NOT
+NOT <= Decoder:inst.JMP
+JMP <= Decoder:inst.NOP
+JN <= Decoder:inst.JN
+JZ <= Decoder:inst.JZ
+STA <= Decoder:inst.LDA
+NOP <= Decoder:inst.STA
+HLT <= Decoder:inst.HLT
+
+
+|DECOD|Decoder:inst
+NOP <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst1.IN0
+A[0] => inst13.IN0
+A[0] => inst15.IN0
+A[0] => inst17.IN0
+A[0] => inst21.IN0
+A[0] => inst27.IN0
+A[0] => inst23.IN0
+A[0] => inst25.IN0
+A[0] => inst19.IN0
+A[1] => inst2.IN0
+A[1] => inst14.IN1
+A[1] => inst15.IN1
+A[1] => inst18.IN1
+A[1] => inst22.IN1
+A[1] => inst27.IN1
+A[1] => inst23.IN1
+A[1] => inst26.IN1
+A[1] => inst19.IN1
+A[2] => inst3.IN0
+A[2] => inst16.IN2
+A[2] => inst17.IN2
+A[2] => inst18.IN2
+A[2] => inst27.IN2
+A[2] => inst24.IN2
+A[2] => inst25.IN2
+A[2] => inst26.IN2
+A[2] => inst19.IN2
+A[3] => inst4.IN0
+A[3] => inst20.IN3
+A[3] => inst21.IN3
+A[3] => inst22.IN3
+A[3] => inst27.IN3
+A[3] => inst23.IN3
+A[3] => inst24.IN3
+A[3] => inst25.IN3
+A[3] => inst26.IN3
+STA <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+LDA <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+ADD <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+OR <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+AND <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+NOT <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+JMP <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+JN <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+JZ <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+HLT <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+DEF[0] <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+DEF[1] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+DEF[2] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+DEF[3] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+DEF[4] <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+
+

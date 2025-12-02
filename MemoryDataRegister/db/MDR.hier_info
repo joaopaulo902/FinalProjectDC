@@ -1,0 +1,56 @@
+|MDR
+OUT[0] <= REGISTER:inst.OUT[0]
+OUT[1] <= REGISTER:inst.OUT[1]
+OUT[2] <= REGISTER:inst.OUT[2]
+OUT[3] <= REGISTER:inst.OUT[3]
+OUT[4] <= REGISTER:inst.OUT[4]
+OUT[5] <= REGISTER:inst.OUT[5]
+OUT[6] <= REGISTER:inst.OUT[6]
+OUT[7] <= REGISTER:inst.OUT[7]
+clk => REGISTER:inst.clk
+Reset => REGISTER:inst.Reset
+IN[0] => REGISTER:inst.IN[0]
+IN[1] => REGISTER:inst.IN[1]
+IN[2] => REGISTER:inst.IN[2]
+IN[3] => REGISTER:inst.IN[3]
+IN[4] => REGISTER:inst.IN[4]
+IN[5] => REGISTER:inst.IN[5]
+IN[6] => REGISTER:inst.IN[6]
+IN[7] => REGISTER:inst.IN[7]
+
+
+|MDR|REGISTER:inst
+OUT[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUT[1] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+OUT[2] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+OUT[4] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+OUT[5] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+OUT[6] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+OUT[7] <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst.ACLR
+Reset => inst10.ACLR
+Reset => inst14.ACLR
+Reset => inst18.ACLR
+Reset => inst8.ACLR
+Reset => inst12.ACLR
+Reset => inst16.ACLR
+Reset => inst20.ACLR
+clk => inst.CLK
+clk => inst10.CLK
+clk => inst14.CLK
+clk => inst18.CLK
+clk => inst8.CLK
+clk => inst12.CLK
+clk => inst16.CLK
+clk => inst20.CLK
+IN[0] => inst.DATAIN
+IN[1] => inst10.DATAIN
+IN[2] => inst14.DATAIN
+IN[3] => inst18.DATAIN
+IN[4] => inst8.DATAIN
+IN[5] => inst12.DATAIN
+IN[6] => inst16.DATAIN
+IN[7] => inst20.DATAIN
+
+

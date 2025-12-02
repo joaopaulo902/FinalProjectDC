@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\joaop\UFRGS\Circuitos\TRFINAL\UC_PLUS_TIMER\simulation\qsim
+vUC_PLUS_TIMER
+Z1 !s100 9PAl^9mFZN1mTRGKONK5c2
+Z2 IZM;P_Y5aHlm;670eER<>>2
+Z3 V3>a`69gjODZR55]i?Pkz00
+Z4 dC:\Users\joaop\UFRGS\Circuitos\TRFINAL\UC_PLUS_TIMER\simulation\qsim
+Z5 w1764687579
+Z6 8UC_PLUS_TIMER.vo
+Z7 FUC_PLUS_TIMER.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|UC_PLUS_TIMER.vo|
+Z10 o-work work -O0
+Z11 n@u@c_@p@l@u@s_@t@i@m@e@r
+!i10b 1
+!s85 0
+Z12 !s108 1764687580.577000
+Z13 !s107 UC_PLUS_TIMER.vo|
+!s101 -O0
+vUC_PLUS_TIMER_vlg_check_tst
+!i10b 1
+Z14 !s100 lI0cONNicFhEQ;`K[AicN2
+Z15 I:WXKadaj988I=`lHlOV6o1
+Z16 VoHkleIb8ViDDbchY8RCNW2
+R4
+Z17 w1764687578
+Z18 8WaveformJMP.vwf.vt
+Z19 FWaveformJMP.vwf.vt
+L0 85
+R8
+r1
+!s85 0
+31
+Z20 !s108 1764687580.675000
+Z21 !s107 WaveformJMP.vwf.vt|
+Z22 !s90 -work|work|WaveformJMP.vwf.vt|
+!s101 -O0
+R10
+Z23 n@u@c_@p@l@u@s_@t@i@m@e@r_vlg_check_tst
+vUC_PLUS_TIMER_vlg_sample_tst
+!i10b 1
+Z24 !s100 4E^j:SUh?k3n3iQ]_N9AN1
+Z25 IXdg>0FiZML3kei2@F7`TJ1
+Z26 VflVo]n0zm`NlGhfi9id1M3
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@u@c_@p@l@u@s_@t@i@m@e@r_vlg_sample_tst
+vUC_PLUS_TIMER_vlg_vec_tst
+!i10b 1
+!s100 BckC:HXDC0n3YzZ16eNzO0
+I^E2h<Z>2efoMO?Ve@@YSN1
+Z28 V;KZCFjR6_f;e7iboFJAUF0
+R4
+R17
+R18
+R19
+Z29 L0 558
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@u@c_@p@l@u@s_@t@i@m@e@r_vlg_vec_tst

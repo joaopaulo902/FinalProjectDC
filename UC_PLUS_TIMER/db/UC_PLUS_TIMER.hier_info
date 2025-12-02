@@ -1,0 +1,337 @@
+|UC_PLUS_TIMER
+Write <= UC:inst1.Write
+STA => UC:inst1.STA
+LDA => UC:inst1.LDA
+ADD => UC:inst1.ADD
+AND => UC:inst1.AND
+OR => UC:inst1.OR
+NOT => UC:inst1.NOT
+flagN => UC:inst1.flagN
+flagZ => UC:inst1.flagZ
+JMP => UC:inst1.JMP
+JN => UC:inst1.JN
+JZ => UC:inst1.JZ
+NOP => UC:inst1.NOP
+HLT => UC:inst1.HLT
+HLT => inst999.IN0
+clk => TIMER:inst.clk
+Reset => TIMER:inst.Reset
+REM_CH <= UC:inst1.REM_CH
+Y_ULA <= UC:inst1.Y_ULA
+ADD_ULA <= UC:inst1.ADD_ULA
+OR_ULA <= UC:inst1.OR_ULA
+AND_ULA <= UC:inst1.AND_ULA
+incPC <= UC:inst1.incPC
+NOT_ULA <= UC:inst1.NOT_ULA
+AC_CH <= UC:inst1.AC_CH
+NZ_CH <= UC:inst1.NZ_CH
+RI_CH <= UC:inst1.RI_CH
+sel <= UC:inst1.sel
+PC_CH <= UC:inst1.PC_CH
+RDM_CH <= UC:inst1.RDM_CH
+Read <= UC:inst1.Read
+
+
+|UC_PLUS_TIMER|UC:inst1
+incPC <= incPC_logic:inst14.incPC
+STA => incPC_logic:inst14.STA
+STA => sel_LOGIC:inst.STA
+STA => inst18.IN1
+STA => GO_t0_LOGIC:inst29.STA
+STA => inst16.IN1
+STA => REM_CH_LOGIC:inst100.STA
+STA => READ_LOGIC:inst17.STA
+LDA => incPC_logic:inst14.LDA
+LDA => sel_LOGIC:inst.LDA
+LDA => inst19.IN1
+LDA => AC_CH_LOGIC:inst24.LDA
+LDA => GO_t0_LOGIC:inst29.LDA
+LDA => REM_CH_LOGIC:inst100.LDA
+LDA => READ_LOGIC:inst17.LDA
+ADD => incPC_logic:inst14.ADD
+ADD => sel_LOGIC:inst.ADD
+ADD => AC_CH_LOGIC:inst24.ADD
+ADD => GO_t0_LOGIC:inst29.ADD
+ADD => REM_CH_LOGIC:inst100.ADD
+ADD => READ_LOGIC:inst17.ADD
+ADD => inst20.IN1
+AND => incPC_logic:inst14.AND
+AND => sel_LOGIC:inst.AND
+AND => AC_CH_LOGIC:inst24.AND
+AND => GO_t0_LOGIC:inst29.AND
+AND => REM_CH_LOGIC:inst100.AND
+AND => READ_LOGIC:inst17.AND
+AND => inst21.IN1
+OR => incPC_logic:inst14.OR
+OR => sel_LOGIC:inst.OR
+OR => AC_CH_LOGIC:inst24.OR
+OR => GO_t0_LOGIC:inst29.OR
+OR => REM_CH_LOGIC:inst100.OR
+OR => READ_LOGIC:inst17.OR
+OR => inst22.IN1
+JN => incPC_logic:inst14.JN
+JN => inst27.IN0
+JN => GO_t0_LOGIC:inst29.JN
+JN => REM_CH_LOGIC:inst100.JN
+JN => READ_LOGIC:inst17.JN
+JZ => incPC_logic:inst14.JZ
+JZ => inst28.IN0
+JZ => GO_t0_LOGIC:inst29.JZ
+JZ => REM_CH_LOGIC:inst100.JZ
+JZ => READ_LOGIC:inst17.JZ
+flagN => incPC_logic:inst14.flagN
+flagN => inst27.IN1
+flagN => GO_t0_LOGIC:inst29.flagN
+flagN => GO_t0_LOGIC:inst29.flagZ
+flagN => REM_CH_LOGIC:inst100.flagN
+flagN => READ_LOGIC:inst17.flagN
+flagZ => incPC_logic:inst14.flagZ
+flagZ => inst28.IN1
+flagZ => REM_CH_LOGIC:inst100.flagZ
+flagZ => READ_LOGIC:inst17.flagZ
+t[0] => REM_CH_LOGIC:inst100.t0
+t[1] => incPC_logic:inst14.t1
+t[1] => READ_LOGIC:inst17.t1
+t[2] => RI_CH.DATAIN
+t[3] => incPC_logic:inst14.t3
+t[3] => inst23.IN0
+t[3] => AC_CH_LOGIC:inst24.t3
+t[3] => GO_t0_LOGIC:inst29.t3
+t[3] => REM_CH_LOGIC:inst100.t3
+t[4] => incPC_logic:inst14.t4
+t[4] => READ_LOGIC:inst17.t4
+t[5] => sel_LOGIC:inst.t[5]
+t[5] => inst25.IN1
+t[5] => GO_t0_LOGIC:inst29.t5
+t[5] => REM_CH_LOGIC:inst100.t5
+t[6] => inst16.IN0
+t[6] => READ_LOGIC:inst17.t6
+t[7] => inst18.IN0
+t[7] => inst19.IN0
+t[7] => AC_CH_LOGIC:inst24.t7
+t[7] => GO_t0_LOGIC:inst29.t7
+t[7] => inst20.IN0
+t[7] => inst22.IN0
+t[7] => inst21.IN0
+sel <= sel_LOGIC:inst.sel
+Write <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+Y_ULA <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+NOT_ULA <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+NOT => inst23.IN1
+NOT => AC_CH_LOGIC:inst24.NOT
+NOT => GO_t0_LOGIC:inst29.NOT
+AC_CH <= AC_CH_LOGIC:inst24.AC_CH
+NZ_CH <= AC_CH_LOGIC:inst24.AC_CH
+PC_CH <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+JMP => inst26.IN1
+JMP => GO_t0_LOGIC:inst29.JMP
+JMP => REM_CH_LOGIC:inst100.JMP
+JMP => READ_LOGIC:inst17.JMP
+GO_t0 <= GO_t0_LOGIC:inst29.GO_t0
+NOP => GO_t0_LOGIC:inst29.NOP
+HLT => GO_t0_LOGIC:inst29.HLT
+RDM_CH <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+REM_CH <= REM_CH_LOGIC:inst100.REM_CH
+RI_CH <= t[2].DB_MAX_OUTPUT_PORT_TYPE
+Read <= READ_LOGIC:inst17.READ
+ADD_ULA <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+OR_ULA <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+AND_ULA <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UC_PLUS_TIMER|UC:inst1|incPC_logic:inst14
+incPC <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+JZ => inst6.IN0
+flagZ => inst1.IN0
+flagN => inst.IN0
+JN => inst8.IN1
+t3 => inst3.IN1
+t4 => inst4.IN0
+STA => inst7.IN0
+ADD => inst7.IN1
+LDA => inst7.IN2
+AND => inst7.IN3
+OR => inst7.IN4
+t1 => inst2.IN2
+
+
+|UC_PLUS_TIMER|UC:inst1|sel_LOGIC:inst
+sel <= inst.DB_MAX_OUTPUT_PORT_TYPE
+t[5] => inst.IN0
+STA => inst7.IN0
+ADD => inst7.IN1
+LDA => inst7.IN2
+AND => inst7.IN3
+OR => inst7.IN4
+
+
+|UC_PLUS_TIMER|UC:inst1|AC_CH_LOGIC:inst24
+AC_CH <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+t7 => inst.IN0
+LDA => inst2.IN0
+AND => inst2.IN1
+OR => inst2.IN2
+ADD => inst2.IN3
+t3 => inst1.IN0
+NOT => inst1.IN1
+
+
+|UC_PLUS_TIMER|UC:inst1|GO_t0_LOGIC:inst29
+GO_t0 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+t3 => inst10.IN0
+NOP => inst2.IN0
+JZ => inst11.IN0
+JZ => inst6.IN1
+flagZ => inst13.IN0
+flagZ => inst6.IN0
+JN => inst12.IN0
+JN => inst5.IN1
+flagN => inst14.IN0
+flagN => inst5.IN0
+NOT => inst2.IN3
+JMP => inst.IN2
+t5 => inst8.IN1
+t7 => inst9.IN0
+STA => inst7.IN0
+ADD => inst7.IN1
+LDA => inst7.IN2
+AND => inst7.IN3
+OR => inst7.IN4
+HLT => ~NO_FANOUT~
+
+
+|UC_PLUS_TIMER|UC:inst1|REM_CH_LOGIC:inst100
+REM_CH <= inst.DB_MAX_OUTPUT_PORT_TYPE
+t5 => inst1.IN0
+STA => inst3.IN0
+ADD => inst3.IN1
+LDA => inst3.IN2
+OR => inst3.IN3
+AND => inst3.IN4
+JMP => inst3.IN5
+t3 => inst2.IN0
+flagN => inst4.IN0
+JN => inst4.IN1
+flagZ => inst5.IN0
+JZ => inst5.IN1
+t0 => inst.IN2
+
+
+|UC_PLUS_TIMER|UC:inst1|READ_LOGIC:inst17
+READ <= inst.DB_MAX_OUTPUT_PORT_TYPE
+t4 => inst6.IN0
+STA => inst3.IN0
+ADD => inst3.IN1
+ADD => inst2.IN3
+LDA => inst3.IN2
+LDA => inst2.IN0
+AND => inst3.IN3
+AND => inst2.IN1
+JMP => inst3.IN4
+OR => inst3.IN5
+OR => inst2.IN2
+JN => inst5.IN0
+flagN => inst5.IN1
+JZ => inst4.IN0
+flagZ => inst4.IN1
+t6 => inst7.IN1
+t1 => inst.IN2
+
+
+|UC_PLUS_TIMER|TIMER:inst
+t[0] <= Decoder:inst19.S[0]
+t[1] <= Decoder:inst19.S[1]
+t[2] <= Decoder:inst19.S[2]
+t[3] <= Decoder:inst19.S[3]
+t[4] <= Decoder:inst19.S[4]
+t[5] <= Decoder:inst19.S[5]
+t[6] <= Decoder:inst19.S[6]
+t[7] <= Decoder:inst19.S[7]
+Reset => inst999.ACLR
+Reset => inst800.ACLR
+Reset => inst2.ACLR
+clk => inst999.CLK
+clk => inst800.CLK
+clk => inst2.CLK
+GO_t0 => Multiplexador:inst17.Sel
+GO_t0 => Multiplexador:inst36.Sel
+GO_t0 => Multiplexador:inst37.Sel
+enable => Multiplexador:inst9.Sel
+enable => Multiplexador:inst34.Sel
+enable => Multiplexador:inst35.Sel
+
+
+|UC_PLUS_TIMER|TIMER:inst|Decoder:inst19
+S[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst1.IN0
+A[0] => inst17.IN0
+A[0] => inst15.IN0
+A[0] => inst16.IN0
+A[0] => inst14.IN0
+A[1] => inst2.IN0
+A[1] => inst17.IN1
+A[1] => inst13.IN1
+A[1] => inst16.IN1
+A[1] => inst12.IN1
+A[2] => inst3.IN0
+A[2] => inst17.IN2
+A[2] => inst13.IN2
+A[2] => inst11.IN2
+A[2] => inst14.IN2
+
+
+|UC_PLUS_TIMER|TIMER:inst|Multiplexador:inst17
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|UC_PLUS_TIMER|TIMER:inst|Multiplexador:inst9
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|UC_PLUS_TIMER|TIMER:inst|Multiplexador:inst36
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|UC_PLUS_TIMER|TIMER:inst|Multiplexador:inst34
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|UC_PLUS_TIMER|TIMER:inst|Multiplexador:inst37
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|UC_PLUS_TIMER|TIMER:inst|Multiplexador:inst35
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+

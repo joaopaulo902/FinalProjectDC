@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Tue Dec 02 11:56:34 2025
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : UC_PLUS_TIMER
+Top-level Entity Name : UC_PLUS_TIMER
+Family : Cyclone IV GX
+Total logic elements : 38
+    Total combinational functions : 38
+    Dedicated logic registers : 3
+Total registers : 3
+Total pins : 30
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0
