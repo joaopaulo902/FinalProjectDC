@@ -24,6 +24,14 @@ RDM_OUT[4] <= MDR:inst7.OUT[4]
 RDM_OUT[5] <= MDR:inst7.OUT[5]
 RDM_OUT[6] <= MDR:inst7.OUT[6]
 RDM_OUT[7] <= MDR:inst7.OUT[7]
+REM_OUT[0] <= MAR:inst8.OUT[0]
+REM_OUT[1] <= MAR:inst8.OUT[1]
+REM_OUT[2] <= MAR:inst8.OUT[2]
+REM_OUT[3] <= MAR:inst8.OUT[3]
+REM_OUT[4] <= MAR:inst8.OUT[4]
+REM_OUT[5] <= MAR:inst8.OUT[5]
+REM_OUT[6] <= MAR:inst8.OUT[6]
+REM_OUT[7] <= MAR:inst8.OUT[7]
 PC_OUT[0] <= PC:inst13.S[0]
 PC_OUT[1] <= PC:inst13.S[1]
 PC_OUT[2] <= PC:inst13.S[2]
@@ -32,6 +40,11 @@ PC_OUT[4] <= PC:inst13.S[4]
 PC_OUT[5] <= PC:inst13.S[5]
 PC_OUT[6] <= PC:inst13.S[6]
 PC_OUT[7] <= PC:inst13.S[7]
+LDA <= DECOD:inst20.LDA
+ADD <= DECOD:inst20.ADD
+AND <= DECOD:inst20.AND
+OR <= DECOD:inst20.OR
+NOT <= DECOD:inst20.NOT
 flagZ <= AC:inst5.flagZ
 ALU_OUT[0] <= ula:inst23.S[0]
 ALU_OUT[1] <= ula:inst23.S[1]
@@ -52,6 +65,19 @@ AC_OUT[7] <= AC:inst5.OUT[7]
 sel_ALU[0] <= ENCODER_ULA:inst1.OPCODE[0]
 sel_ALU[1] <= ENCODER_ULA:inst1.OPCODE[1]
 sel_ALU[2] <= ENCODER_ULA:inst1.OPCODE[2]
+Y_ULA <= UC:inst4.Y_ULA
+ADD_ULA <= UC:inst4.ADD_ULA
+AND_ULA <= UC:inst4.AND_ULA
+OR_ULA <= UC:inst4.OR_ULA
+NOT_ULA <= UC:inst4.NOT_ULA
+states[0] <= t[0].DB_MAX_OUTPUT_PORT_TYPE
+states[1] <= t[1].DB_MAX_OUTPUT_PORT_TYPE
+states[2] <= t[2].DB_MAX_OUTPUT_PORT_TYPE
+states[3] <= t[3].DB_MAX_OUTPUT_PORT_TYPE
+states[4] <= t[4].DB_MAX_OUTPUT_PORT_TYPE
+states[5] <= t[5].DB_MAX_OUTPUT_PORT_TYPE
+states[6] <= t[6].DB_MAX_OUTPUT_PORT_TYPE
+states[7] <= t[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |NEANDER|AC:inst5
@@ -414,21 +440,21 @@ t1 => inst.IN2
 
 
 |NEANDER|DECOD:inst20
-LDA <= Decoder:inst.ADD
+LDA <= Decoder:inst.LDA
 In[0] => Decoder:inst.A[0]
 In[1] => Decoder:inst.A[1]
 In[2] => Decoder:inst.A[2]
 In[3] => Decoder:inst.A[3]
-ADD <= Decoder:inst.AND
-AND <= Decoder:inst.OR
-OR <= Decoder:inst.NOT
-NOT <= Decoder:inst.JMP
-JMP <= Decoder:inst.NOP
+ADD <= Decoder:inst.ADD
+AND <= Decoder:inst.AND
+OR <= Decoder:inst.OR
+STA <= Decoder:inst.STA
 JN <= Decoder:inst.JN
 JZ <= Decoder:inst.JZ
-STA <= Decoder:inst.LDA
-NOP <= Decoder:inst.STA
 HLT <= Decoder:inst.HLT
+NOP <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+NOT <= Decoder:inst.NOT
+JMP <= Decoder:inst.JMP
 
 
 |NEANDER|DECOD:inst20|Decoder:inst
@@ -2519,16 +2545,16 @@ C <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |NEANDER|ENCODER_ULA:inst1
-V <= <GND>
-OPCODE[0] <= <GND>
-OPCODE[1] <= <GND>
-OPCODE[2] <= <GND>
-Y_ULA => ~NO_FANOUT~
-ADD_ULA => ~NO_FANOUT~
-AND_ULA => ~NO_FANOUT~
-OR_ULA => ~NO_FANOUT~
-NOT_ULA => ~NO_FANOUT~
-X_ULA => ~NO_FANOUT~
+V <= Pencoder:inst.V
+ADD_ULA => Pencoder:inst.A[3]
+AND_ULA => Pencoder:inst.A[5]
+OR_ULA => Pencoder:inst.A[4]
+NOT_ULA => Pencoder:inst.A[6]
+Y_ULA => Pencoder:inst.A[2]
+X_ULA => Pencoder:inst.A[0]
+OPCODE[0] <= Pencoder:inst.S[0]
+OPCODE[1] <= Pencoder:inst.S[1]
+OPCODE[2] <= Pencoder:inst.S[2]
 
 
 |NEANDER|ENCODER_ULA:inst1|Pencoder:inst

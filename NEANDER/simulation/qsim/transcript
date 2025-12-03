@@ -30,5 +30,5 @@
 # Loading work.NEANDER_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : Waveform6.vwf.vt(1003)
+# ** Note: $finish    : Waveform10.vwf.vt(1577)
 #    Time: 1 us  Iteration: 0  Instance: /NEANDER_vlg_vec_tst/tb_out

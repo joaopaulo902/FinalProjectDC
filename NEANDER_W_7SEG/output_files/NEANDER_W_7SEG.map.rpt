@@ -1,0 +1,793 @@
+Analysis & Synthesis report for NEANDER_W_7SEG
+Wed Dec 03 17:48:55 2025
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for NEANDER:inst|ROM:inst25|altsyncram:Mux0_rtl_0|altsyncram_1111:auto_generated
+ 14. Parameter Settings for Inferred Entity Instance: NEANDER:inst|ROM:inst25|altsyncram:Mux0_rtl_0
+ 15. altsyncram Parameter Settings by Entity Instance
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 03 17:48:55 2025      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; NEANDER_W_7SEG                             ;
+; Top-level Entity Name              ; NEANDER_W_7SEG                             ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 211                                        ;
+;     Total combinational functions  ; 206                                        ;
+;     Dedicated logic registers      ; 67                                         ;
+; Total registers                    ; 67                                         ;
+; Total pins                         ; 34                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 2,048                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; NEANDER_W_7SEG     ; NEANDER_W_7SEG     ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                        ;
++----------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; ROM_teste.vhd                          ; yes             ; User VHDL File                                        ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/ROM_teste.vhd                              ;         ;
+; NEANDER_W_7SEG.bdf                     ; yes             ; User Block Diagram/Schematic File                     ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/NEANDER_W_7SEG.bdf                         ;         ;
+; neander.bdf                            ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/neander.bdf                                ;         ;
+; ac.bdf                                 ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/ac.bdf                                     ;         ;
+; multiplexador.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/multiplexador.bdf                          ;         ;
+; flaglogic.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/flaglogic.bdf                              ;         ;
+; uc.bdf                                 ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/uc.bdf                                     ;         ;
+; incpc_logic.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/incpc_logic.bdf                            ;         ;
+; sel_logic.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/sel_logic.bdf                              ;         ;
+; ac_ch_logic.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/ac_ch_logic.bdf                            ;         ;
+; go_t0_logic.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/go_t0_logic.bdf                            ;         ;
+; rem_ch_logic.bdf                       ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/rem_ch_logic.bdf                           ;         ;
+; read_logic.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/read_logic.bdf                             ;         ;
+; decod.bdf                              ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/decod.bdf                                  ;         ;
+; decoder.bdf                            ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/decoder.bdf                                ;         ;
+; ri.bdf                                 ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/ri.bdf                                     ;         ;
+; run_step.bdf                           ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/run_step.bdf                               ;         ;
+; feqdiv.bdf                             ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/feqdiv.bdf                                 ;         ;
+; freqdiv_x5.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/freqdiv_x5.bdf                             ;         ;
+; mux8bit.bdf                            ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/mux8bit.bdf                                ;         ;
+; mdr.bdf                                ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/mdr.bdf                                    ;         ;
+; register.bdf                           ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/register.bdf                               ;         ;
+; mar.bdf                                ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/mar.bdf                                    ;         ;
+; pc.bdf                                 ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/pc.bdf                                     ;         ;
+; timer.bdf                              ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/timer.bdf                                  ;         ;
+; decoder3x8.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/decoder3x8.bdf                             ;         ;
+; ula.bdf                                ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/ula.bdf                                    ;         ;
+; sumcla.bdf                             ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/sumcla.bdf                                 ;         ;
+; clalogic.bdf                           ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/clalogic.bdf                               ;         ;
+; adderunit.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/adderunit.bdf                              ;         ;
+; multiplier.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/multiplier.bdf                             ;         ;
+; halfadder.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/halfadder.bdf                              ;         ;
+; fulladder.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/fulladder.bdf                              ;         ;
+; encoder_ula.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/encoder_ula.bdf                            ;         ;
+; pencoder.bdf                           ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/pencoder.bdf                               ;         ;
+; converter.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/converter.bdf                              ;         ;
+; sega.bdf                               ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/sega.bdf                                   ;         ;
+; segb.bdf                               ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/segb.bdf                                   ;         ;
+; segc.bdf                               ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/segc.bdf                                   ;         ;
+; segd.bdf                               ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/segd.bdf                                   ;         ;
+; sege.bdf                               ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/sege.bdf                                   ;         ;
+; segf.bdf                               ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/segf.bdf                                   ;         ;
+; segg.bdf                               ; yes             ; Auto-Found Block Diagram/Schematic File               ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/segg.bdf                                   ;         ;
+; altsyncram.tdf                         ; yes             ; Megafunction                                          ; c:/users/joaop/ufrgs/circuitos/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc                  ; yes             ; Megafunction                                          ; c:/users/joaop/ufrgs/circuitos/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                            ; yes             ; Megafunction                                          ; c:/users/joaop/ufrgs/circuitos/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                         ; yes             ; Megafunction                                          ; c:/users/joaop/ufrgs/circuitos/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal131.inc                         ; yes             ; Megafunction                                          ; c:/users/joaop/ufrgs/circuitos/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc        ;         ;
+; a_rdenreg.inc                          ; yes             ; Megafunction                                          ; c:/users/joaop/ufrgs/circuitos/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                             ; yes             ; Megafunction                                          ; c:/users/joaop/ufrgs/circuitos/altera/13.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                             ; yes             ; Megafunction                                          ; c:/users/joaop/ufrgs/circuitos/altera/13.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                           ; yes             ; Megafunction                                          ; c:/users/joaop/ufrgs/circuitos/altera/13.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_1111.tdf                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/db/altsyncram_1111.tdf                     ;         ;
+; NEANDER_W_7SEG.NEANDER_W_7SEG0.rtl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/joaop/UFRGS/Circuitos/TRFINAL/NEANDER_W_7SEG/db/NEANDER_W_7SEG.NEANDER_W_7SEG0.rtl.mif  ;         ;
++----------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                      ;
++--------------------------+-------------------------------------------------------+
+; Resource                 ; Usage                                                 ;
++--------------------------+-------------------------------------------------------+
+; I/O pins                 ; 34                                                    ;
+; Total memory bits        ; 2048                                                  ;
+; DSP block 9-bit elements ; 0                                                     ;
+; Maximum fan-out node     ; NEANDER:inst|RUN_STEP:inst22|Multiplexador:inst|inst5 ;
+; Maximum fan-out          ; 50                                                    ;
+; Total fan-out            ; 1022                                                  ;
+; Average fan-out          ; 2.93                                                  ;
++--------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
+; |NEANDER_W_7SEG                              ; 206 (0)           ; 67 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0         ; 34   ; 0            ; |NEANDER_W_7SEG                                                                              ; work         ;
+;    |NEANDER:inst|                            ; 178 (3)           ; 67 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst                                                                 ; work         ;
+;       |AC:inst5|                             ; 3 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|AC:inst5                                                        ; work         ;
+;          |flagLogic:inst27|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|AC:inst5|flagLogic:inst27                                       ; work         ;
+;       |DECOD:inst20|                         ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|DECOD:inst20                                                    ; work         ;
+;          |Decoder:inst|                      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|DECOD:inst20|Decoder:inst                                       ; work         ;
+;       |ENCODER_ULA:inst1|                    ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ENCODER_ULA:inst1                                               ; work         ;
+;          |Pencoder:inst|                     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ENCODER_ULA:inst1|Pencoder:inst                                 ; work         ;
+;       |MAR:inst8|                            ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8                                                       ; work         ;
+;          |REGISTER:inst|                     ; 8 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8|REGISTER:inst                                         ; work         ;
+;             |Multiplexador:inst14|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8|REGISTER:inst|Multiplexador:inst14                    ; work         ;
+;             |Multiplexador:inst17|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8|REGISTER:inst|Multiplexador:inst17                    ; work         ;
+;             |Multiplexador:inst1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8|REGISTER:inst|Multiplexador:inst1                     ; work         ;
+;             |Multiplexador:inst20|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8|REGISTER:inst|Multiplexador:inst20                    ; work         ;
+;             |Multiplexador:inst23|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8|REGISTER:inst|Multiplexador:inst23                    ; work         ;
+;             |Multiplexador:inst2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8|REGISTER:inst|Multiplexador:inst2                     ; work         ;
+;             |Multiplexador:inst3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8|REGISTER:inst|Multiplexador:inst3                     ; work         ;
+;             |Multiplexador:inst4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8|REGISTER:inst|Multiplexador:inst4                     ; work         ;
+;       |MDR:inst7|                            ; 8 (0)             ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MDR:inst7                                                       ; work         ;
+;          |REGISTER:inst|                     ; 8 (8)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|MDR:inst7|REGISTER:inst                                         ; work         ;
+;       |PC:inst13|                            ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|PC:inst13                                                       ; work         ;
+;       |RI:inst2|                             ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|RI:inst2                                                        ; work         ;
+;       |ROM:inst25|                           ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ROM:inst25                                                      ; work         ;
+;          |altsyncram:Mux0_rtl_0|             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ROM:inst25|altsyncram:Mux0_rtl_0                                ; work         ;
+;             |altsyncram_1111:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ROM:inst25|altsyncram:Mux0_rtl_0|altsyncram_1111:auto_generated ; work         ;
+;       |RUN_STEP:inst22|                      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|RUN_STEP:inst22                                                 ; work         ;
+;          |Multiplexador:inst|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|RUN_STEP:inst22|Multiplexador:inst                              ; work         ;
+;       |TIMER:inst|                           ; 8 (1)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|TIMER:inst                                                      ; work         ;
+;          |Decoder3x8:inst4|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|TIMER:inst|Decoder3x8:inst4                                     ; work         ;
+;          |Multiplexador:inst17|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|TIMER:inst|Multiplexador:inst17                                 ; work         ;
+;          |Multiplexador:inst36|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|TIMER:inst|Multiplexador:inst36                                 ; work         ;
+;          |Multiplexador:inst37|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|TIMER:inst|Multiplexador:inst37                                 ; work         ;
+;       |UC:inst4|                             ; 19 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|UC:inst4                                                        ; work         ;
+;          |AC_CH_LOGIC:inst24|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|UC:inst4|AC_CH_LOGIC:inst24                                     ; work         ;
+;          |GO_t0_LOGIC:inst29|                ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|UC:inst4|GO_t0_LOGIC:inst29                                     ; work         ;
+;          |READ_LOGIC:inst17|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|UC:inst4|READ_LOGIC:inst17                                      ; work         ;
+;          |REM_CH_LOGIC:inst100|              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|UC:inst4|REM_CH_LOGIC:inst100                                   ; work         ;
+;          |incPC_logic:inst14|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|UC:inst4|incPC_logic:inst14                                     ; work         ;
+;       |ULA:inst23|                           ; 80 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23                                                      ; work         ;
+;          |Mux8bit:inst19|                    ; 36 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|Mux8bit:inst19                                       ; work         ;
+;             |Multiplexador:inst1|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|Mux8bit:inst19|Multiplexador:inst1                   ; work         ;
+;             |Multiplexador:inst2|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|Mux8bit:inst19|Multiplexador:inst2                   ; work         ;
+;             |Multiplexador:inst3|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|Mux8bit:inst19|Multiplexador:inst3                   ; work         ;
+;             |Multiplexador:inst4|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|Mux8bit:inst19|Multiplexador:inst4                   ; work         ;
+;             |Multiplexador:inst5|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|Mux8bit:inst19|Multiplexador:inst5                   ; work         ;
+;             |Multiplexador:inst6|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|Mux8bit:inst19|Multiplexador:inst6                   ; work         ;
+;             |Multiplexador:inst7|            ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|Mux8bit:inst19|Multiplexador:inst7                   ; work         ;
+;             |Multiplexador:inst|             ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|Mux8bit:inst19|Multiplexador:inst                    ; work         ;
+;          |multiplier:inst13|                 ; 27 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|multiplier:inst13                                    ; work         ;
+;             |FullAdder:inst11|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|multiplier:inst13|FullAdder:inst11                   ; work         ;
+;             |FullAdder:inst28|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|multiplier:inst13|FullAdder:inst28                   ; work         ;
+;             |FullAdder:inst2|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|multiplier:inst13|FullAdder:inst2                    ; work         ;
+;             |FullAdder:inst3|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|multiplier:inst13|FullAdder:inst3                    ; work         ;
+;             |FullAdder:inst4|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|multiplier:inst13|FullAdder:inst4                    ; work         ;
+;             |FullAdder:inst5|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|multiplier:inst13|FullAdder:inst5                    ; work         ;
+;             |FullAdder:inst9|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|multiplier:inst13|FullAdder:inst9                    ; work         ;
+;             |FullAdder:inst|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|multiplier:inst13|FullAdder:inst                     ; work         ;
+;             |halfAdder:inst1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|multiplier:inst13|halfAdder:inst1                    ; work         ;
+;          |sumCLA:inst2|                      ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst2                                         ; work         ;
+;             |CLAlogic:inst4|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst2|CLAlogic:inst4                          ; work         ;
+;             |adderUnit:inst1|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst2|adderUnit:inst1                         ; work         ;
+;             |adderUnit:inst2|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst2|adderUnit:inst2                         ; work         ;
+;             |adderUnit:inst3|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst2|adderUnit:inst3                         ; work         ;
+;             |adderUnit:inst|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst2|adderUnit:inst                          ; work         ;
+;          |sumCLA:inst8|                      ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst8                                         ; work         ;
+;             |CLAlogic:inst4|                 ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst8|CLAlogic:inst4                          ; work         ;
+;             |adderUnit:inst1|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst8|adderUnit:inst1                         ; work         ;
+;             |adderUnit:inst2|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst8|adderUnit:inst2                         ; work         ;
+;             |adderUnit:inst3|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|sumCLA:inst8|adderUnit:inst3                         ; work         ;
+;       |feqDiv:inst12|                        ; 25 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12                                                   ; work         ;
+;          |freqDiv_x5:inst10|                 ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst10                                 ; work         ;
+;          |freqDiv_x5:inst11|                 ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst11                                 ; work         ;
+;          |freqDiv_x5:inst12|                 ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst12                                 ; work         ;
+;          |freqDiv_x5:inst9|                  ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst9                                  ; work         ;
+;          |freqDiv_x5:inst|                   ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst                                   ; work         ;
+;    |converter:inst4|                         ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst4                                                              ; work         ;
+;       |segA:inst|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst4|segA:inst                                                    ; work         ;
+;       |segB:inst17|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst4|segB:inst17                                                  ; work         ;
+;       |segC:inst18|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst4|segC:inst18                                                  ; work         ;
+;       |segD:inst19|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst4|segD:inst19                                                  ; work         ;
+;       |segE:inst20|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst4|segE:inst20                                                  ; work         ;
+;       |segF:inst21|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst4|segF:inst21                                                  ; work         ;
+;       |segG:inst22|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst4|segG:inst22                                                  ; work         ;
+;    |converter:inst5|                         ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst5                                                              ; work         ;
+;       |segA:inst|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst5|segA:inst                                                    ; work         ;
+;       |segB:inst17|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst5|segB:inst17                                                  ; work         ;
+;       |segC:inst18|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst5|segC:inst18                                                  ; work         ;
+;       |segD:inst19|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst5|segD:inst19                                                  ; work         ;
+;       |segE:inst20|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst5|segE:inst20                                                  ; work         ;
+;       |segF:inst21|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst5|segF:inst21                                                  ; work         ;
+;       |segG:inst22|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst5|segG:inst22                                                  ; work         ;
+;    |converter:inst6|                         ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst6                                                              ; work         ;
+;       |segA:inst|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst6|segA:inst                                                    ; work         ;
+;       |segB:inst17|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst6|segB:inst17                                                  ; work         ;
+;       |segC:inst18|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst6|segC:inst18                                                  ; work         ;
+;       |segD:inst19|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst6|segD:inst19                                                  ; work         ;
+;       |segE:inst20|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst6|segE:inst20                                                  ; work         ;
+;       |segF:inst21|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst6|segF:inst21                                                  ; work         ;
+;       |segG:inst22|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst6|segG:inst22                                                  ; work         ;
+;    |converter:inst999|                       ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst999                                                            ; work         ;
+;       |segA:inst|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst999|segA:inst                                                  ; work         ;
+;       |segB:inst17|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst999|segB:inst17                                                ; work         ;
+;       |segC:inst18|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst999|segC:inst18                                                ; work         ;
+;       |segD:inst19|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst999|segD:inst19                                                ; work         ;
+;       |segE:inst20|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst999|segE:inst20                                                ; work         ;
+;       |segF:inst21|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst999|segF:inst21                                                ; work         ;
+;       |segG:inst22|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |NEANDER_W_7SEG|converter:inst999|segG:inst22                                                ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                  ;
++-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------+
+; Name                                                                                    ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                    ;
++-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------+
+; NEANDER:inst|ROM:inst25|altsyncram:Mux0_rtl_0|altsyncram_1111:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 8            ; --           ; --           ; 2048 ; NEANDER_W_7SEG.NEANDER_W_7SEG0.rtl.mif ;
++-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++-----------------------------------------------+-----------------------------------------------------------+
+; Register name                                 ; Reason for Removal                                        ;
++-----------------------------------------------+-----------------------------------------------------------+
+; NEANDER:inst|AC:inst5|inst24                  ; Merged with NEANDER:inst|AC:inst5|inst21                  ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst21   ; Lost fanout                                               ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst12   ; Lost fanout                                               ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst15   ; Lost fanout                                               ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst18   ; Lost fanout                                               ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst5    ; Lost fanout                                               ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst6    ; Lost fanout                                               ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst10   ; Lost fanout                                               ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst     ; Lost fanout                                               ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst18~0 ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst15~0 ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst15~0 ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst12~0 ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst12~0 ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst6~0  ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst6~0  ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst~0   ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst~0   ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst5~0  ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst5~0  ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst10~0 ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst10~0 ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst21~0 ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst12~3 ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst21~3 ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst15~3 ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst21~3 ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst18~3 ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst21~3 ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst5~3  ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst21~3 ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst6~3  ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst21~3 ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst10~3 ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst21~3 ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst~3   ; Merged with NEANDER:inst|MDR:inst7|REGISTER:inst|inst21~3 ;
+; Total Number of Removed Registers = 23        ;                                                           ;
++-----------------------------------------------+-----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 67    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 50    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 21    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                              ;
++-----------------------------------------------+------------------------------------+------+
+; Register Name                                 ; Megafunction                       ; Type ;
++-----------------------------------------------+------------------------------------+------+
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst21~2 ; NEANDER:inst|ROM:inst25|Mux0_rtl_0 ; ROM  ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst12~2 ; NEANDER:inst|ROM:inst25|Mux0_rtl_0 ; ROM  ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst15~2 ; NEANDER:inst|ROM:inst25|Mux0_rtl_0 ; ROM  ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst18~2 ; NEANDER:inst|ROM:inst25|Mux0_rtl_0 ; ROM  ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst5~2  ; NEANDER:inst|ROM:inst25|Mux0_rtl_0 ; ROM  ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst6~2  ; NEANDER:inst|ROM:inst25|Mux0_rtl_0 ; ROM  ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst10~2 ; NEANDER:inst|ROM:inst25|Mux0_rtl_0 ; ROM  ;
+; NEANDER:inst|MDR:inst7|REGISTER:inst|inst~2   ; NEANDER:inst|ROM:inst25|Mux0_rtl_0 ; ROM  ;
++-----------------------------------------------+------------------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |NEANDER_W_7SEG|NEANDER:inst|MAR:inst8|REGISTER:inst|inst15                      ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |NEANDER_W_7SEG|NEANDER:inst|ULA:inst23|Mux8bit:inst19|Multiplexador:inst7|inst5 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for NEANDER:inst|ROM:inst25|altsyncram:Mux0_rtl_0|altsyncram_1111:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: NEANDER:inst|ROM:inst25|altsyncram:Mux0_rtl_0 ;
++------------------------------------+----------------------------------------+------------------+
+; Parameter Name                     ; Value                                  ; Type             ;
++------------------------------------+----------------------------------------+------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                      ; Untyped          ;
+; AUTO_CARRY_CHAINS                  ; ON                                     ; AUTO_CARRY       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                    ; IGNORE_CARRY     ;
+; AUTO_CASCADE_CHAINS                ; ON                                     ; AUTO_CASCADE     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                    ; IGNORE_CASCADE   ;
+; WIDTH_BYTEENA                      ; 1                                      ; Untyped          ;
+; OPERATION_MODE                     ; ROM                                    ; Untyped          ;
+; WIDTH_A                            ; 8                                      ; Untyped          ;
+; WIDTHAD_A                          ; 8                                      ; Untyped          ;
+; NUMWORDS_A                         ; 256                                    ; Untyped          ;
+; OUTDATA_REG_A                      ; UNREGISTERED                           ; Untyped          ;
+; ADDRESS_ACLR_A                     ; NONE                                   ; Untyped          ;
+; OUTDATA_ACLR_A                     ; NONE                                   ; Untyped          ;
+; WRCONTROL_ACLR_A                   ; NONE                                   ; Untyped          ;
+; INDATA_ACLR_A                      ; NONE                                   ; Untyped          ;
+; BYTEENA_ACLR_A                     ; NONE                                   ; Untyped          ;
+; WIDTH_B                            ; 1                                      ; Untyped          ;
+; WIDTHAD_B                          ; 1                                      ; Untyped          ;
+; NUMWORDS_B                         ; 1                                      ; Untyped          ;
+; INDATA_REG_B                       ; CLOCK1                                 ; Untyped          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                 ; Untyped          ;
+; RDCONTROL_REG_B                    ; CLOCK1                                 ; Untyped          ;
+; ADDRESS_REG_B                      ; CLOCK1                                 ; Untyped          ;
+; OUTDATA_REG_B                      ; UNREGISTERED                           ; Untyped          ;
+; BYTEENA_REG_B                      ; CLOCK1                                 ; Untyped          ;
+; INDATA_ACLR_B                      ; NONE                                   ; Untyped          ;
+; WRCONTROL_ACLR_B                   ; NONE                                   ; Untyped          ;
+; ADDRESS_ACLR_B                     ; NONE                                   ; Untyped          ;
+; OUTDATA_ACLR_B                     ; NONE                                   ; Untyped          ;
+; RDCONTROL_ACLR_B                   ; NONE                                   ; Untyped          ;
+; BYTEENA_ACLR_B                     ; NONE                                   ; Untyped          ;
+; WIDTH_BYTEENA_A                    ; 1                                      ; Untyped          ;
+; WIDTH_BYTEENA_B                    ; 1                                      ; Untyped          ;
+; RAM_BLOCK_TYPE                     ; AUTO                                   ; Untyped          ;
+; BYTE_SIZE                          ; 8                                      ; Untyped          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                              ; Untyped          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                   ; Untyped          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                   ; Untyped          ;
+; INIT_FILE                          ; NEANDER_W_7SEG.NEANDER_W_7SEG0.rtl.mif ; Untyped          ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                 ; Untyped          ;
+; MAXIMUM_DEPTH                      ; 0                                      ; Untyped          ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                 ; Untyped          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                 ; Untyped          ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                 ; Untyped          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                 ; Untyped          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                        ; Untyped          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                        ; Untyped          ;
+; ENABLE_ECC                         ; FALSE                                  ; Untyped          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                  ; Untyped          ;
+; WIDTH_ECCSTATUS                    ; 3                                      ; Untyped          ;
+; DEVICE_FAMILY                      ; Cyclone IV GX                          ; Untyped          ;
+; CBXI_PARAMETER                     ; altsyncram_1111                        ; Untyped          ;
++------------------------------------+----------------------------------------+------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                          ;
++-------------------------------------------+-----------------------------------------------+
+; Name                                      ; Value                                         ;
++-------------------------------------------+-----------------------------------------------+
+; Number of entity instances                ; 1                                             ;
+; Entity Instance                           ; NEANDER:inst|ROM:inst25|altsyncram:Mux0_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                           ;
+;     -- WIDTH_A                            ; 8                                             ;
+;     -- NUMWORDS_A                         ; 256                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
+;     -- WIDTH_B                            ; 1                                             ;
+;     -- NUMWORDS_B                         ; 1                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                     ;
++-------------------------------------------+-----------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed Dec 03 17:48:50 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off NEANDER_W_7SEG -c NEANDER_W_7SEG
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file rom_teste.vhd
+    Info (12022): Found design unit 1: ROM-arch
+    Info (12023): Found entity 1: ROM
+Info (12021): Found 1 design units, including 1 entities, in source file neander_w_7seg.bdf
+    Info (12023): Found entity 1: NEANDER_W_7SEG
+Info (12127): Elaborating entity "NEANDER_W_7SEG" for the top level hierarchy
+Warning (12125): Using design file neander.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: NEANDER
+Info (12128): Elaborating entity "NEANDER" for hierarchy "NEANDER:inst"
+Warning (275008): Primitive "GND" of instance "inst19" not used
+Warning (12125): Using design file ac.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: AC
+Info (12128): Elaborating entity "AC" for hierarchy "NEANDER:inst|AC:inst5"
+Warning (12125): Using design file multiplexador.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Multiplexador
+Info (12128): Elaborating entity "Multiplexador" for hierarchy "NEANDER:inst|AC:inst5|Multiplexador:inst26"
+Warning (12125): Using design file flaglogic.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: flagLogic
+Info (12128): Elaborating entity "flagLogic" for hierarchy "NEANDER:inst|AC:inst5|flagLogic:inst27"
+Warning (12125): Using design file uc.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: UC
+Info (12128): Elaborating entity "UC" for hierarchy "NEANDER:inst|UC:inst4"
+Warning (275089): Not all bits in bus "t[4..1]" are used
+Warning (275080): Converted elements in bus name "t" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "t[1]" to "t1"
+    Warning (275081): Converted element name(s) from "t[3]" to "t3"
+    Warning (275081): Converted element name(s) from "t[4]" to "t4"
+Warning (275089): Not all bits in bus "t[6..1]" are used
+Warning (275080): Converted elements in bus name "t" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "t[1]" to "t1"
+    Warning (275081): Converted element name(s) from "t[4]" to "t4"
+    Warning (275081): Converted element name(s) from "t[6]" to "t6"
+Warning (275089): Not all bits in bus "t[7..3]" are used
+Warning (275080): Converted elements in bus name "t" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "t[3]" to "t3"
+    Warning (275081): Converted element name(s) from "t[7]" to "t7"
+Warning (275089): Not all bits in bus "t[7..3]" are used
+Warning (275080): Converted elements in bus name "t" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "t[3]" to "t3"
+    Warning (275081): Converted element name(s) from "t[5]" to "t5"
+    Warning (275081): Converted element name(s) from "t[7]" to "t7"
+Warning (275089): Not all bits in bus "t[5..0]" are used
+Warning (275080): Converted elements in bus name "t" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "t[0]" to "t0"
+    Warning (275081): Converted element name(s) from "t[3]" to "t3"
+    Warning (275081): Converted element name(s) from "t[5]" to "t5"
+Warning (12125): Using design file incpc_logic.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: incPC_logic
+Info (12128): Elaborating entity "incPC_logic" for hierarchy "NEANDER:inst|UC:inst4|incPC_logic:inst14"
+Warning (275089): Not all bits in bus "t[4..1]" are used
+Warning (275080): Converted elements in bus name "t" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "t[1]" to "t1"
+    Warning (275081): Converted element name(s) from "t[4]" to "t4"
+    Warning (275081): Converted element name(s) from "t[3]" to "t3"
+Warning (12125): Using design file sel_logic.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: sel_LOGIC
+Info (12128): Elaborating entity "sel_LOGIC" for hierarchy "NEANDER:inst|UC:inst4|sel_LOGIC:inst"
+Warning (12125): Using design file ac_ch_logic.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: AC_CH_LOGIC
+Info (12128): Elaborating entity "AC_CH_LOGIC" for hierarchy "NEANDER:inst|UC:inst4|AC_CH_LOGIC:inst24"
+Warning (275089): Not all bits in bus "t[7..3]" are used
+Warning (275080): Converted elements in bus name "t" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "t[7]" to "t7"
+    Warning (275081): Converted element name(s) from "t[3]" to "t3"
+Warning (12125): Using design file go_t0_logic.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: GO_t0_LOGIC
+Info (12128): Elaborating entity "GO_t0_LOGIC" for hierarchy "NEANDER:inst|UC:inst4|GO_t0_LOGIC:inst29"
+Warning (275089): Not all bits in bus "t[7..3]" are used
+Warning (275080): Converted elements in bus name "t" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "t[3]" to "t3"
+    Warning (275081): Converted element name(s) from "t[5]" to "t5"
+    Warning (275081): Converted element name(s) from "t[7]" to "t7"
+Warning (275009): Pin "HLT" not connected
+Warning (12125): Using design file rem_ch_logic.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: REM_CH_LOGIC
+Info (12128): Elaborating entity "REM_CH_LOGIC" for hierarchy "NEANDER:inst|UC:inst4|REM_CH_LOGIC:inst100"
+Warning (275089): Not all bits in bus "t[5..0]" are used
+Warning (275080): Converted elements in bus name "t" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "t[0]" to "t0"
+    Warning (275081): Converted element name(s) from "t[3]" to "t3"
+    Warning (275081): Converted element name(s) from "t[5]" to "t5"
+Warning (12125): Using design file read_logic.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: READ_LOGIC
+Info (12128): Elaborating entity "READ_LOGIC" for hierarchy "NEANDER:inst|UC:inst4|READ_LOGIC:inst17"
+Warning (275089): Not all bits in bus "t[6..1]" are used
+Warning (275080): Converted elements in bus name "t" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "t[1]" to "t1"
+    Warning (275081): Converted element name(s) from "t[4]" to "t4"
+    Warning (275081): Converted element name(s) from "t[6]" to "t6"
+Warning (12125): Using design file decod.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: DECOD
+Info (12128): Elaborating entity "DECOD" for hierarchy "NEANDER:inst|DECOD:inst20"
+Warning (12125): Using design file decoder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Decoder
+Info (12128): Elaborating entity "Decoder" for hierarchy "NEANDER:inst|DECOD:inst20|Decoder:inst"
+Warning (275011): Block or symbol "AND4" of instance "inst21" overlaps another block or symbol
+Warning (12125): Using design file ri.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RI
+Info (12128): Elaborating entity "RI" for hierarchy "NEANDER:inst|RI:inst2"
+Warning (12125): Using design file run_step.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RUN_STEP
+Info (12128): Elaborating entity "RUN_STEP" for hierarchy "NEANDER:inst|RUN_STEP:inst22"
+Warning (12125): Using design file feqdiv.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: feqDiv
+Info (12128): Elaborating entity "feqDiv" for hierarchy "NEANDER:inst|feqDiv:inst12"
+Warning (12125): Using design file freqdiv_x5.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: freqDiv_x5
+Info (12128): Elaborating entity "freqDiv_x5" for hierarchy "NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst12"
+Warning (12125): Using design file mux8bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Mux8bit
+Info (12128): Elaborating entity "Mux8bit" for hierarchy "NEANDER:inst|Mux8bit:inst14"
+Warning (12125): Using design file mdr.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MDR
+Info (12128): Elaborating entity "MDR" for hierarchy "NEANDER:inst|MDR:inst7"
+Warning (12125): Using design file register.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: REGISTER
+Info (12128): Elaborating entity "REGISTER" for hierarchy "NEANDER:inst|MDR:inst7|REGISTER:inst"
+Info (12128): Elaborating entity "ROM" for hierarchy "NEANDER:inst|ROM:inst25"
+Warning (12125): Using design file mar.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MAR
+Info (12128): Elaborating entity "MAR" for hierarchy "NEANDER:inst|MAR:inst8"
+Warning (12125): Using design file pc.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: PC
+Info (12128): Elaborating entity "PC" for hierarchy "NEANDER:inst|PC:inst13"
+Warning (12125): Using design file timer.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: TIMER
+Info (12128): Elaborating entity "TIMER" for hierarchy "NEANDER:inst|TIMER:inst"
+Warning (12125): Using design file decoder3x8.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Decoder3x8
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "NEANDER:inst|TIMER:inst|Decoder3x8:inst4"
+Warning (12125): Using design file ula.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ULA
+Info (12128): Elaborating entity "ula" for hierarchy "NEANDER:inst|ula:inst23"
+Warning (275008): Primitive "GND" of instance "inst" not used
+Warning (12125): Using design file sumcla.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: sumCLA
+Info (12128): Elaborating entity "sumCLA" for hierarchy "NEANDER:inst|ula:inst23|sumCLA:inst8"
+Warning (12125): Using design file clalogic.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: CLAlogic
+Info (12128): Elaborating entity "CLAlogic" for hierarchy "NEANDER:inst|ula:inst23|sumCLA:inst8|CLAlogic:inst4"
+Warning (12125): Using design file adderunit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: adderUnit
+Info (12128): Elaborating entity "adderUnit" for hierarchy "NEANDER:inst|ula:inst23|sumCLA:inst8|adderUnit:inst"
+Warning (12125): Using design file multiplier.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: multiplier
+Info (12128): Elaborating entity "multiplier" for hierarchy "NEANDER:inst|ula:inst23|multiplier:inst13"
+Warning (12125): Using design file halfadder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: halfAdder
+Info (12128): Elaborating entity "halfAdder" for hierarchy "NEANDER:inst|ula:inst23|multiplier:inst13|halfAdder:inst1"
+Warning (12125): Using design file fulladder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: FullAdder
+Info (12128): Elaborating entity "FullAdder" for hierarchy "NEANDER:inst|ula:inst23|multiplier:inst13|FullAdder:inst"
+Warning (12125): Using design file encoder_ula.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ENCODER_ULA
+Info (12128): Elaborating entity "ENCODER_ULA" for hierarchy "NEANDER:inst|ENCODER_ULA:inst1"
+Warning (12125): Using design file pencoder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Pencoder
+Info (12128): Elaborating entity "Pencoder" for hierarchy "NEANDER:inst|ENCODER_ULA:inst1|Pencoder:inst"
+Warning (275089): Not all bits in bus "notA[6..2]" are used
+Warning (275080): Converted elements in bus name "notA" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "notA[2]" to "notA2"
+    Warning (275081): Converted element name(s) from "notA[4]" to "notA4"
+    Warning (275081): Converted element name(s) from "notA[6]" to "notA6"
+    Warning (275081): Converted element name(s) from "notA[4]" to "notA4"
+    Warning (275081): Converted element name(s) from "notA[6]" to "notA6"
+    Warning (275081): Converted element name(s) from "notA[5]" to "notA5"
+    Warning (275081): Converted element name(s) from "notA[6]" to "notA6"
+    Warning (275081): Converted element name(s) from "notA[4]" to "notA4"
+    Warning (275081): Converted element name(s) from "notA[4]" to "notA4"
+    Warning (275081): Converted element name(s) from "notA[6]" to "notA6"
+    Warning (275081): Converted element name(s) from "notA[5]" to "notA5"
+    Warning (275081): Converted element name(s) from "notA[4]" to "notA4"
+    Warning (275081): Converted element name(s) from "notA[2]" to "notA2"
+    Warning (275081): Converted element name(s) from "notA[5]" to "notA5"
+Warning (12125): Using design file converter.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: converter
+Info (12128): Elaborating entity "converter" for hierarchy "converter:inst4"
+Warning (12125): Using design file sega.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segA
+Info (12128): Elaborating entity "segA" for hierarchy "converter:inst4|segA:inst"
+Warning (12125): Using design file segb.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segB
+Info (12128): Elaborating entity "segB" for hierarchy "converter:inst4|segB:inst17"
+Warning (275008): Primitive "NOT" of instance "inst5" not used
+Warning (12125): Using design file segc.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segC
+Info (12128): Elaborating entity "segC" for hierarchy "converter:inst4|segC:inst18"
+Warning (275008): Primitive "WIRE" of instance "inst12" not used
+Warning (12125): Using design file segd.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segD
+Info (12128): Elaborating entity "segD" for hierarchy "converter:inst4|segD:inst19"
+Warning (12125): Using design file sege.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segE
+Info (12128): Elaborating entity "segE" for hierarchy "converter:inst4|segE:inst20"
+Warning (275008): Primitive "WIRE" of instance "inst11" not used
+Warning (275008): Primitive "NOT" of instance "inst7" not used
+Warning (275008): Primitive "WIRE" of instance "inst9" not used
+Warning (12125): Using design file segf.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segF
+Info (12128): Elaborating entity "segF" for hierarchy "converter:inst4|segF:inst21"
+Warning (275008): Primitive "NOT" of instance "inst7" not used
+Warning (12125): Using design file segg.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segG
+Info (12128): Elaborating entity "segG" for hierarchy "converter:inst4|segG:inst22"
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer NEANDER:inst|RUN_STEP:inst22|Multiplexador:inst|inst5~0
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276031): Inferred altsyncram megafunction from the following design logic: "NEANDER:inst|ROM:inst25|Mux0_rtl_0"
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter RAM_BLOCK_TYPE set to AUTO
+        Info (286033): Parameter INIT_FILE set to NEANDER_W_7SEG.NEANDER_W_7SEG0.rtl.mif
+Info (12130): Elaborated megafunction instantiation "NEANDER:inst|ROM:inst25|altsyncram:Mux0_rtl_0"
+Info (12133): Instantiated megafunction "NEANDER:inst|ROM:inst25|altsyncram:Mux0_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "RAM_BLOCK_TYPE" = "AUTO"
+    Info (12134): Parameter "INIT_FILE" = "NEANDER_W_7SEG.NEANDER_W_7SEG0.rtl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1111.tdf
+    Info (12023): Found entity 1: altsyncram_1111
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 269 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 30 output pins
+    Info (21061): Implemented 227 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 118 warnings
+    Info: Peak virtual memory: 4733 megabytes
+    Info: Processing ended: Wed Dec 03 17:48:55 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
+
+

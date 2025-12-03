@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dC:\Users\joaop\UFRGS\Circuitos\TRFINAL\NEANDER\simulation\qsim
 vNEANDER
-Z1 IYBTICF@nV^@`YeMb32AmC0
-Z2 Vkddf]=9Cn8kE?O;Ra>oSD3
+Z1 I9HM;d9gfLbEbQ5B1:UV`Q2
+Z2 VUT9k;2^1LW?4?SCJ`D?nY0
 Z3 dC:\Users\joaop\UFRGS\Circuitos\TRFINAL\NEANDER\simulation\qsim
-Z4 w1764790719
+Z4 w1764793402
 Z5 8NEANDER.vo
 Z6 FNEANDER.vo
 L0 31
@@ -18,35 +18,35 @@ Z8 !s90 -work|work|NEANDER.vo|
 Z9 o-work work -O0
 Z10 n@n@e@a@n@d@e@r
 !i10b 1
-Z11 !s100 Y^6?K@kBik5dVIdS4N9Oe0
+Z11 !s100 1<ngcn[jMI4R=UG=l=Rb51
 !s85 0
-Z12 !s108 1764790720.855000
+Z12 !s108 1764793403.010000
 Z13 !s107 NEANDER.vo|
 !s101 -O0
 vNEANDER_vlg_check_tst
 !i10b 1
-!s100 Q2F<mHG:JVV7kNz5c2:Dk0
-IkXQD?eEWWF_nNefV0>8ah1
-VdoMM=l3HzYzR`lcMDAe670
+!s100 H=g0;W6@T]Bm6hfN3hJWV2
+IO9Yo?NKVPA0<Bz:TIg0[O1
+VFAzoUUecmceXo@Pm7Nhd83
 R3
-Z14 w1764790718
-Z15 8Waveform6.vwf.vt
-Z16 FWaveform6.vwf.vt
+Z14 w1764793400
+Z15 8Waveform10.vwf.vt
+Z16 FWaveform10.vwf.vt
 L0 63
 R7
 r1
 !s85 0
 31
-Z17 !s108 1764790720.951000
-Z18 !s107 Waveform6.vwf.vt|
-Z19 !s90 -work|work|Waveform6.vwf.vt|
+Z17 !s108 1764793403.155000
+Z18 !s107 Waveform10.vwf.vt|
+Z19 !s90 -work|work|Waveform10.vwf.vt|
 !s101 -O0
 R9
 Z20 n@n@e@a@n@d@e@r_vlg_check_tst
 vNEANDER_vlg_sample_tst
 !i10b 1
-!s100 f2GAe507H4:nQ15^lB58D1
-IFoB=hf2XoD4Uj=?nb[jXF2
+!s100 `8AozACN`a[M5PfmIc15>1
+IK;WbVz7YIafa_IdE7jk?E2
 Z21 VXHXE`IhJdA>3eo@Z7G<F93
 R3
 R14
@@ -65,14 +65,14 @@ R9
 Z22 n@n@e@a@n@d@e@r_vlg_sample_tst
 vNEANDER_vlg_vec_tst
 !i10b 1
-!s100 gOT^h43I9nM1[`OB:0lWS2
-IT^2A:KFEMn[NlVC16D3YL0
+!s100 ZX18cidWfhX^z?O3I5NBL1
+IID3:oHYn=HjSozkHE_znC1
 Z23 Va4EUgA6L5fY8T[ZLecC@G2
 R3
 R14
 R15
 R16
-L0 1007
+L0 1581
 R7
 r1
 !s85 0
