@@ -1,5 +1,5 @@
 Assembler report for NEANDER_W_7SEG
-Wed Dec 03 17:49:10 2025
+Wed Dec 03 18:11:37 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Dec 03 17:49:10 2025 ;
+; Assembler Status      ; Successful - Wed Dec 03 18:11:37 2025 ;
 ; Revision Name         ; NEANDER_W_7SEG                        ;
 ; Top-level Entity Name ; NEANDER_W_7SEG                        ;
 ; Family                ; Cyclone IV GX                         ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                        ;
 +----------------+------------------------------------------------------------------------------------------------+
 ; Device         ; EP4CGX15BF14C6                                                                                 ;
-; JTAG usercode  ; 0x000E0D4F                                                                                     ;
-; Checksum       ; 0x000E0D4F                                                                                     ;
+; JTAG usercode  ; 0x000E0F5F                                                                                     ;
+; Checksum       ; 0x000E0F5F                                                                                     ;
 +----------------+------------------------------------------------------------------------------------------------+
 
 
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Dec 03 17:49:09 2025
+    Info: Processing started: Wed Dec 03 18:11:36 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off NEANDER_W_7SEG -c NEANDER_W_7SEG
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4649 megabytes
-    Info: Processing ended: Wed Dec 03 17:49:10 2025
+    Info: Processing ended: Wed Dec 03 18:11:37 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

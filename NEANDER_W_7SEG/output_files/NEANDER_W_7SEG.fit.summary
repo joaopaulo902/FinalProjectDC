@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Dec 03 17:49:07 2025
+Fitter Status : Successful - Wed Dec 03 18:11:34 2025
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : NEANDER_W_7SEG
 Top-level Entity Name : NEANDER_W_7SEG
 Family : Cyclone IV GX
 Device : EP4CGX15BF14C6
 Timing Models : Final
-Total logic elements : 231 / 14,400 ( 2 % )
-    Total combinational functions : 207 / 14,400 ( 1 % )
+Total logic elements : 236 / 14,400 ( 2 % )
+    Total combinational functions : 211 / 14,400 ( 1 % )
     Dedicated logic registers : 67 / 14,400 ( < 1 % )
 Total registers : 67
 Total pins : 34 / 81 ( 42 % )
