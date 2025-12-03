@@ -38,15 +38,16 @@ PCB[6] <= converter:inst5.G
 |NEANDER_W_7SEG|NEANDER:inst
 flagN <= AC:inst5.flagN
 RUN_STEP_SW => RUN_STEP:inst22.RUN_STEP
-CLOCK => feqDiv:inst12.clock
-Reset => feqDiv:inst12.Reset
+CLOCK => RUN_STEP:inst22.CLOCK
+STEP_PB => RUN_STEP:inst22.step
 Reset => RI:inst2.Reset
 Reset => MDR:inst7.Reset
 Reset => MAR:inst8.Reset
-Reset => PC:inst3.Reset
+Reset => Multiplexador:inst26.Sel
+Reset => Multiplexador:inst27.Sel
+Reset => Mux8bit:inst13.Sel
 Reset => TIMER:inst.Reset
 Reset => AC:inst5.Reset
-STEP_PB => RUN_STEP:inst22.step
 PC_OUT[0] <= PC:inst3.S[0]
 PC_OUT[1] <= PC:inst3.S[1]
 PC_OUT[2] <= PC:inst3.S[2]
@@ -546,66 +547,6 @@ Sel => inst1.IN0
 Sel => inst4.IN0
 B => inst1.IN1
 A => inst.IN1
-
-
-|NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12
-S <= freqDiv_x5:inst12.S
-clock => freqDiv_x5:inst.CLK
-Reset => freqDiv_x5:inst.Reset
-Reset => freqDiv_x5:inst9.Reset
-Reset => freqDiv_x5:inst10.Reset
-Reset => freqDiv_x5:inst11.Reset
-Reset => freqDiv_x5:inst12.Reset
-
-
-|NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst12
-S <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-Reset => inst4.ACLR
-Reset => inst3.ACLR
-Reset => inst2.ACLR
-Reset => inst1.ACLR
-Reset => inst.ACLR
-CLK => inst.CLK
-
-
-|NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst11
-S <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-Reset => inst4.ACLR
-Reset => inst3.ACLR
-Reset => inst2.ACLR
-Reset => inst1.ACLR
-Reset => inst.ACLR
-CLK => inst.CLK
-
-
-|NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst10
-S <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-Reset => inst4.ACLR
-Reset => inst3.ACLR
-Reset => inst2.ACLR
-Reset => inst1.ACLR
-Reset => inst.ACLR
-CLK => inst.CLK
-
-
-|NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst9
-S <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-Reset => inst4.ACLR
-Reset => inst3.ACLR
-Reset => inst2.ACLR
-Reset => inst1.ACLR
-Reset => inst.ACLR
-CLK => inst.CLK
-
-
-|NEANDER_W_7SEG|NEANDER:inst|feqDiv:inst12|freqDiv_x5:inst
-S <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-Reset => inst4.ACLR
-Reset => inst3.ACLR
-Reset => inst2.ACLR
-Reset => inst1.ACLR
-Reset => inst.ACLR
-CLK => inst.CLK
 
 
 |NEANDER_W_7SEG|NEANDER:inst|Mux8bit:inst14
@@ -1148,38 +1089,32 @@ S[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 S[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 S[6] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
 S[7] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
-Reset => inst4.ACLR
-Reset => inst6.ACLR
-Reset => inst7.ACLR
-Reset => inst8.ACLR
-Reset => inst999.ACLR
-Reset => inst800.ACLR
-Reset => inst2.ACLR
-Reset => inst3.ACLR
-clk => inst4.CLK
-clk => inst6.CLK
-clk => inst7.CLK
-clk => inst8.CLK
-clk => inst999.CLK
-clk => inst800.CLK
-clk => inst2.CLK
-clk => inst3.CLK
-OPCODE[0] => Multiplexador:inst17.Sel
+PRESET[0] => inst5.IN0
+PRESET[0] => inst84.IN0
+PRESET[1] => inst33.IN0
+PRESET[1] => inst86.IN0
+PRESET[2] => inst41.IN0
+PRESET[2] => inst88.IN0
+PRESET[3] => inst78.IN0
+PRESET[3] => inst90.IN0
+PRESET[4] => inst79.IN0
+PRESET[4] => inst92.IN0
+PRESET[5] => inst80.IN0
+PRESET[5] => inst94.IN0
+PRESET[6] => inst81.IN0
+PRESET[6] => inst96.IN0
+PRESET[7] => inst82.IN0
+PRESET[7] => inst500.IN0
+OPCODE[0] => inst42.IN0
 OPCODE[0] => Multiplexador:inst102.Sel
-OPCODE[0] => Multiplexador:inst14.Sel
 OPCODE[0] => Multiplexador:inst26.Sel
-OPCODE[0] => Multiplexador:inst1.Sel
 OPCODE[0] => Multiplexador:inst29.Sel
-OPCODE[0] => Multiplexador:inst.Sel
 OPCODE[0] => Multiplexador:inst32.Sel
-OPCODE[0] => Multiplexador:inst31.Sel
-OPCODE[0] => Multiplexador:inst28.Sel
 OPCODE[0] => Multiplexador:inst11.Sel
-OPCODE[0] => Multiplexador:inst24.Sel
 OPCODE[0] => Multiplexador:inst18.Sel
-OPCODE[0] => Multiplexador:inst23.Sel
 OPCODE[0] => Multiplexador:inst98.Sel
 OPCODE[0] => inst45.IN1
+OPCODE[1] => inst10.IN0
 OPCODE[1] => Multiplexador:inst37.Sel
 OPCODE[1] => Multiplexador:inst38.Sel
 OPCODE[1] => Multiplexador:inst39.Sel
@@ -1189,14 +1124,14 @@ OPCODE[1] => Multiplexador:inst34.Sel
 OPCODE[1] => Multiplexador:inst35.Sel
 OPCODE[1] => Multiplexador:inst36.Sel
 OPCODE[1] => inst44.IN0
-PRESET[0] => Multiplexador:inst31.A
-PRESET[1] => Multiplexador:inst28.A
-PRESET[2] => Multiplexador:inst24.A
-PRESET[3] => Multiplexador:inst23.A
-PRESET[4] => Multiplexador:inst17.A
-PRESET[5] => Multiplexador:inst14.A
-PRESET[6] => Multiplexador:inst1.A
-PRESET[7] => Multiplexador:inst.A
+clk => inst4.CLK
+clk => inst6.CLK
+clk => inst7.CLK
+clk => inst8.CLK
+clk => inst999.CLK
+clk => inst800.CLK
+clk => inst2.CLK
+clk => inst3.CLK
 STORE[0] <= inst400[0].DB_MAX_OUTPUT_PORT_TYPE
 STORE[1] <= inst400[1].DB_MAX_OUTPUT_PORT_TYPE
 STORE[2] <= inst400[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -1208,14 +1143,6 @@ STORE[7] <= inst400[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst37
-Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-Sel => inst1.IN0
-Sel => inst4.IN0
-B => inst1.IN1
-A => inst.IN1
-
-
-|NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst17
 Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 Sel => inst1.IN0
 Sel => inst4.IN0
@@ -1239,14 +1166,6 @@ B => inst1.IN1
 A => inst.IN1
 
 
-|NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst14
-Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-Sel => inst1.IN0
-Sel => inst4.IN0
-B => inst1.IN1
-A => inst.IN1
-
-
 |NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst26
 Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 Sel => inst1.IN0
@@ -1256,14 +1175,6 @@ A => inst.IN1
 
 
 |NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst39
-Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-Sel => inst1.IN0
-Sel => inst4.IN0
-B => inst1.IN1
-A => inst.IN1
-
-
-|NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst1
 Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 Sel => inst1.IN0
 Sel => inst4.IN0
@@ -1287,14 +1198,6 @@ B => inst1.IN1
 A => inst.IN1
 
 
-|NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst
-Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-Sel => inst1.IN0
-Sel => inst4.IN0
-B => inst1.IN1
-A => inst.IN1
-
-
 |NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst32
 Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 Sel => inst1.IN0
@@ -1311,23 +1214,7 @@ B => inst1.IN1
 A => inst.IN1
 
 
-|NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst31
-Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-Sel => inst1.IN0
-Sel => inst4.IN0
-B => inst1.IN1
-A => inst.IN1
-
-
 |NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst34
-Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-Sel => inst1.IN0
-Sel => inst4.IN0
-B => inst1.IN1
-A => inst.IN1
-
-
-|NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst28
 Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 Sel => inst1.IN0
 Sel => inst4.IN0
@@ -1351,14 +1238,6 @@ B => inst1.IN1
 A => inst.IN1
 
 
-|NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst24
-Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-Sel => inst1.IN0
-Sel => inst4.IN0
-B => inst1.IN1
-A => inst.IN1
-
-
 |NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst18
 Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 Sel => inst1.IN0
@@ -1375,7 +1254,7 @@ B => inst1.IN1
 A => inst.IN1
 
 
-|NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst23
+|NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst98
 Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 Sel => inst1.IN0
 Sel => inst4.IN0
@@ -1383,7 +1262,114 @@ B => inst1.IN1
 A => inst.IN1
 
 
-|NEANDER_W_7SEG|NEANDER:inst|PC:inst3|Multiplexador:inst98
+|NEANDER_W_7SEG|NEANDER:inst|Multiplexador:inst26
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|NEANDER_W_7SEG|NEANDER:inst|Multiplexador:inst27
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|NEANDER_W_7SEG|NEANDER:inst|Mux8bit:inst13
+Z[0] <= Multiplexador:inst.Z
+Z[1] <= Multiplexador:inst1.Z
+Z[2] <= Multiplexador:inst2.Z
+Z[3] <= Multiplexador:inst3.Z
+Z[4] <= Multiplexador:inst4.Z
+Z[5] <= Multiplexador:inst5.Z
+Z[6] <= Multiplexador:inst6.Z
+Z[7] <= Multiplexador:inst7.Z
+Sel => Multiplexador:inst1.Sel
+Sel => Multiplexador:inst.Sel
+Sel => Multiplexador:inst2.Sel
+Sel => Multiplexador:inst3.Sel
+Sel => Multiplexador:inst5.Sel
+Sel => Multiplexador:inst6.Sel
+Sel => Multiplexador:inst7.Sel
+Sel => Multiplexador:inst4.Sel
+A[0] => Multiplexador:inst.A
+A[1] => Multiplexador:inst1.A
+A[2] => Multiplexador:inst2.A
+A[3] => Multiplexador:inst3.A
+A[4] => Multiplexador:inst4.A
+A[5] => Multiplexador:inst5.A
+A[6] => Multiplexador:inst6.A
+A[7] => Multiplexador:inst7.A
+B[0] => Multiplexador:inst.B
+B[1] => Multiplexador:inst1.B
+B[2] => Multiplexador:inst2.B
+B[3] => Multiplexador:inst3.B
+B[4] => Multiplexador:inst4.B
+B[5] => Multiplexador:inst5.B
+B[6] => Multiplexador:inst6.B
+B[7] => Multiplexador:inst7.B
+
+
+|NEANDER_W_7SEG|NEANDER:inst|Mux8bit:inst13|Multiplexador:inst1
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|NEANDER_W_7SEG|NEANDER:inst|Mux8bit:inst13|Multiplexador:inst
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|NEANDER_W_7SEG|NEANDER:inst|Mux8bit:inst13|Multiplexador:inst2
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|NEANDER_W_7SEG|NEANDER:inst|Mux8bit:inst13|Multiplexador:inst3
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|NEANDER_W_7SEG|NEANDER:inst|Mux8bit:inst13|Multiplexador:inst5
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|NEANDER_W_7SEG|NEANDER:inst|Mux8bit:inst13|Multiplexador:inst6
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|NEANDER_W_7SEG|NEANDER:inst|Mux8bit:inst13|Multiplexador:inst7
+Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Sel => inst1.IN0
+Sel => inst4.IN0
+B => inst1.IN1
+A => inst.IN1
+
+
+|NEANDER_W_7SEG|NEANDER:inst|Mux8bit:inst13|Multiplexador:inst4
 Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 Sel => inst1.IN0
 Sel => inst4.IN0

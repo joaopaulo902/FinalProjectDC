@@ -1,5 +1,5 @@
 Flow report for NEANDER_W_7SEG
-Wed Dec 03 18:11:37 2025
+Wed Dec 03 18:43:56 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec 03 18:11:37 2025      ;
+; Flow Status                        ; Successful - Wed Dec 03 18:43:56 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; NEANDER_W_7SEG                             ;
 ; Top-level Entity Name              ; NEANDER_W_7SEG                             ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 236 / 14,400 ( 2 % )                       ;
-;     Total combinational functions  ; 211 / 14,400 ( 1 % )                       ;
-;     Dedicated logic registers      ; 67 / 14,400 ( < 1 % )                      ;
-; Total registers                    ; 67                                         ;
+; Total logic elements               ; 184 / 14,400 ( 1 % )                       ;
+;     Total combinational functions  ; 184 / 14,400 ( 1 % )                       ;
+;     Dedicated logic registers      ; 42 / 14,400 ( < 1 % )                      ;
+; Total registers                    ; 42                                         ;
 ; Total pins                         ; 34 / 81 ( 42 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 2,048 / 552,960 ( < 1 % )                  ;
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/03/2025 18:11:17 ;
+; Start date & time ; 12/03/2025 18:43:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; NEANDER_W_7SEG      ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 106408470312197.176479627716248 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 106408470312197.176479822221224 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
 ; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
@@ -94,10 +94,10 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 4723 MB             ; 00:00:04                           ;
-; Fitter               ; 00:00:09     ; 1.0                     ; 5030 MB             ; 00:00:08                           ;
+; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 4735 MB             ; 00:00:03                           ;
+; Fitter               ; 00:00:07     ; 1.0                     ; 5050 MB             ; 00:00:07                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4641 MB             ; 00:00:01                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:13                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,7 +116,7 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off NEANDER_W_7SEG -c NEANDER_W_7SEG
-quartus_fit --read_settings_files=on --write_settings_files=off NEANDER_W_7SEG -c NEANDER_W_7SEG
+quartus_fit --read_settings_files=off --write_settings_files=off NEANDER_W_7SEG -c NEANDER_W_7SEG
 quartus_asm --read_settings_files=off --write_settings_files=off NEANDER_W_7SEG -c NEANDER_W_7SEG
 
 
