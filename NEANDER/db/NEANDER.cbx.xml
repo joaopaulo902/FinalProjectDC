@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="NEANDER">
+		<CBX_INST_ENTRY INSTANCE_NAME="|NEANDER|ROM:inst25|altsyncram:Mux0_rtl_0" CBX_FILE_NAME="altsyncram_bmv.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

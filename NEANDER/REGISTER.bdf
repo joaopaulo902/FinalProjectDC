@@ -53,7 +53,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 40 104 208 120)
+	(rect 40 80 208 96)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Reset" (rect 5 0 34 12)(font "Arial" ))
 	(pt 168 8)
