@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 16 16 192 144)
-	(text "MDR" (rect 5 0 30 14)(font "Arial" (font_size 8)))
+	(text "REGISTER" (rect 5 0 62 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 112 25 124)(font "Arial" ))
 	(port
 		(pt 0 32)
