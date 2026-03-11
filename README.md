@@ -70,13 +70,3 @@ HLT
 ### Particularities of some instructions
 
 The multiplication (MUL) will only take the bits [3..0] from each operand. Bits [7..4] will be ignored.
-
-**To Do's:**
-
-* Make STA Logic
-* Make LDA Logic
-* Make Control Unit Logic
-* Make Run/Step Mode Logic => MUX between FPGA's clock and button press user input
-* Check frequency Div logic
-* Understad how the memory will be implemented ROM or RAM
-* Flags N and Z
